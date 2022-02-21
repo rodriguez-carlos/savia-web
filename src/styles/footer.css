@@ -31,9 +31,10 @@
 }
 
 .title-social-media .social-media .social-media-item{
+    background: #717171;
     border: 5px;
     border-radius: 50%;
-    background: #717171;
+    cursor: pointer;
     height: 28px;
     margin: 0 5px;
     padding: 9px;
