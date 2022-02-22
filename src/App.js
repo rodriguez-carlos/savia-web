@@ -1,6 +1,7 @@
 import Nav from "./components/Nav";
 import "./App.css";
 import Footer from "./components/Footer";
+import ProductCard from "./components/ProductCard";
 
 function App() {
   return (
@@ -8,7 +9,7 @@ function App() {
       <header>
         <Nav />
       </header>
-
+      <ProductCard />
       <Footer/>
     </div>
   );
