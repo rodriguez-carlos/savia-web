@@ -15,7 +15,6 @@ const Footer = () => {
       <div>
         <p>BEBER CON MODERACIÓN. PROHIBIDA SU VENTA A MENORES DE 18 AÑOS</p>
         <p>
-          BEBER CON MODERACIÓN. PROHIBIDA SU VENTA A MENORES DE 18 AÑOS
           Copyright ©Cerveza Savia 2022. Todos los derechos reservados
         </p>
       </div>
