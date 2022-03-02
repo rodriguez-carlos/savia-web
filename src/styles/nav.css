@@ -2,25 +2,22 @@
 
 .nav {
   display: flex;
-  background: #E5E5E5;
-  height: 140.5px;
+  background: white;
+  padding: 2rem;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .logo {
-  position: absolute;
-  width: 96px;
-  height: 84px;
-  left: 82px;
-  top: 26.5px;
+  width: 19rem;
+  height: 16rem;
 }
 
 .menu {
-  position: absolute;
   display: inline-block;
-  left: 37.5%;
-  top: 30.5px;
   width: auto;
 }
+
 ul {
   display: flex;
   align-items: center;
