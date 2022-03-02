@@ -5,15 +5,14 @@
   display: flex;
   flex-direction: column;
   height: 40rem;
-  justify-content: center;
-  width: 100%;
+  justify-content: space-evenly;
+  padding: 0 16.5rem 4rem;
 }
 
 .title-social-media {
     align-items: center;
     display: flex;
     justify-content: space-between;
-    margin: 0px 165px 40px;
 }
 
 .title-social-media h3 {
@@ -21,7 +20,6 @@
     line-height: 72px;
     color: #202020;
     letter-spacing: -0.5px;
-    width: 50%;
 }
 
 .title-social-media .social-media{

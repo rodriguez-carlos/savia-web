@@ -5,7 +5,10 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 const ShowcaseCarouselItem = () => {
     return (
         <Paper elevation={3} className="showcase-carousel-item">
-            <img src="https://via.placeholder.com/1441x739" alt="" className="showcase-carousel-item-img"/>
+            <img src="https://via.placeholder.com/1441x739"
+                alt=""
+                className="showcase-carousel-item-img"
+            />
             <Paper elevation={1} className="showcase-carousel-item-right">
                 <div className="showcase-carousel-item-right-content">
                     <Typography variant="h2" className="showcase-carousel-item-title">

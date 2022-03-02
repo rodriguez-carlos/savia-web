@@ -6,6 +6,13 @@
     background-color: red;
     max-width: 1441px;
     position: relative;
+    min-height: 60rem;
+    margin: auto;
+
+    .showcase-carousel-item-img {
+        width: 100%;
+        object-fit: cover;
+    }
 
     .showcase-carousel-item-title {
         @include primary-font(6.4rem, 700);
