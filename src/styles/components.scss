@@ -1,0 +1,19 @@
+@import "typography";
+
+@mixin button($bg-color, $font-color) {
+    background-color: $bg-color;
+    color: $font-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4rem;
+    height: 4.8rem;
+    padding: 1em 3em;
+    letter-spacing: 1.25px;
+
+    @include accent-font(1.6rem, 500);
+
+    svg {
+        margin-left: 1rem;
+    }
+}

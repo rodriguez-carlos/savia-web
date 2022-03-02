@@ -1,9 +1,19 @@
+@import "components";
+
 .showcase-carousel-item {
     display: flex;
     flex-direction: row;
     background-color: red;
     max-width: 1441px;
     position: relative;
+
+    .showcase-carousel-item-title {
+        @include primary-font(6.4rem, 700);
+    }
+
+    .showcase-carousel-item-text {
+        @include normal-font(3.9rem, 300);
+    }
 
     .showcase-carousel-item-left {
         width: 100%;
@@ -17,10 +27,14 @@
         margin-left: 50%;
 
         .showcase-carousel-item-right-content {
-            margin: 40% 20%;
+            margin: 30% 15%;
             text-align: left;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
 
             .showcase-carousel-item-right-content-button {
+                @include button(#37474F, white);
                 margin-top: 9.5rem;
             }
         }
