@@ -1,0 +1,14 @@
+$primary: Jost;
+$normal: Roboto, sans-serif;
+
+@mixin primary-font($size, $weight: 400) {
+    font-family: $primary;
+    font-weight: $weight;
+    font-size: $size;
+}
+
+@mixin normal-font($size, $weight: normal) {
+    font-family: $normal;
+    font-weight: $weight;
+    font-size: $size;
+}
