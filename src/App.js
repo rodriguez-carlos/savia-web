@@ -1,5 +1,5 @@
 import Nav from "./components/Nav";
-import "./App.css";
+import "./styles/App.css";
 import Footer from "./components/Footer";
 import ProductCard from "./components/ProductCard";
 import ShowcaseCarouselItem from "./components/ShowcaseCarouselItem";
