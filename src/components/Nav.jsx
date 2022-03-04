@@ -4,6 +4,7 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import "../styles/nav.scss";
 import logo from "../static/sabia-10x10-03.png";
+import { Link } from "react-router-dom";
 
 const Nav = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -17,11 +18,15 @@ const Nav = () => {
 
   return (
     <div className="nav">
-      <img src={logo} className="logo" alt="savia" />
+      <Link to="/">
+        <img src={logo} className="logo" alt="savia" />
+      </Link>
 
       <div className="menu">
         <ul>
-          <li className="list-item">Sobre Nosotros</li>
+          <Link to="/nosotros">
+            <li className="list-item">Sobre Nosotros</li>
+          </Link>
           <li className="list-item">
             <Button
               id="basic-button"
