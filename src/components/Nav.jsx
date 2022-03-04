@@ -24,7 +24,7 @@ const Nav = () => {
 
       <div className="menu">
         <ul>
-          <Link to="/nosotros">
+          <Link to="/nosotros" style={{ textDecoration: 'none' }}>
             <li className="list-item">Sobre Nosotros</li>
           </Link>
           <li className="list-item">
@@ -34,6 +34,7 @@ const Nav = () => {
               aria-haspopup="true"
               aria-expanded={open ? "true" : undefined}
               onClick={handleClick}
+              style={{color: '#37474F'}}
             >
               Productos y Servicios
             </Button>
