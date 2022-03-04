@@ -2,8 +2,8 @@ import React from "react";
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
-import "../styles/nav.css";
-import logo from "../static/sabia-10x10-02.png";
+import "../styles/nav.scss";
+import logo from "../static/sabia-10x10-03.png";
 
 const Nav = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);

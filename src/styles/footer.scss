@@ -1,11 +1,11 @@
+@import "typography";
+
 .footer-container {
   background: #c4c4c4;
   display: flex;
   flex-direction: column;
-  height: 406px;
+  height: 40rem;
   justify-content: center;
-  left: 0px;
-  top: 2906px;
   width: 100%;
 }
 
@@ -13,17 +13,15 @@
     align-items: center;
     display: flex;
     justify-content: space-between;
-    margin: 0px 165px;
+    margin: 0px 165px 40px;
 }
 
-.title-social-media h3{
-    font-family: Jost;
-    font-size: 55px;
+.title-social-media h3 {
+    @include primary-font(5.5rem);
     line-height: 72px;
     color: #202020;
     letter-spacing: -0.5px;
     width: 50%;
-    font-weight: 400;
 }
 
 .title-social-media .social-media{
@@ -40,6 +38,16 @@
     margin: 0 5px;
     padding: 9px;
     width: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.terms-copyright p {
+    @include normal-font(1.6rem, 600);
+    margin: 0;
+    line-height: 1.5;
 }
 
 

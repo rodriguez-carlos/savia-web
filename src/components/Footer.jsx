@@ -1,4 +1,4 @@
-import "../styles/footer.css";
+import "../styles/footer.scss";
 
 const Footer = () => {
   return (
@@ -12,7 +12,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div>
+      <div className="terms-copyright">
         <p>BEBER CON MODERACIÓN. PROHIBIDA SU VENTA A MENORES DE 18 AÑOS</p>
         <p>
           Copyright ©Cerveza Savia 2022. Todos los derechos reservados

@@ -2,6 +2,7 @@ import Nav from "./components/Nav";
 import "./App.css";
 import Footer from "./components/Footer";
 import ProductCard from "./components/ProductCard";
+import ShowcaseCarouselItem from "./components/ShowcaseCarouselItem";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <Nav />
       </header>
       <ProductCard />
+      <ShowcaseCarouselItem />
       <Footer/>
     </div>
   );
