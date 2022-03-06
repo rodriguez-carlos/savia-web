@@ -2,36 +2,50 @@
 
 .nav {
   display: flex;
-  background: white;
-  padding: 2rem;
-  justify-content: space-around;
   align-items: center;
+  justify-content: space-between;
+  margin: auto 16.4rem;
+  .logo {
+    width: 19.2rem;
+    height: 18.3rem;
+  }
+  .menu {
+    display: inline-block;
+    width: auto;
+  }
+  ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+  }
+  .list-item {
+    #basic-button {
+      font-family: Jost;
+      font-size: 2rem;
+      text-transform: capitalize;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 35px;
+      height: 35px;
+      letter-spacing: 0.001rem;
+      color: #37474f;
+      margin: 0px 20px;
+      cursor: pointer;
+      p {
+        text-transform: lowercase;
+      }
+    }
+  }
 }
 
-.logo {
-  width: 19rem;
-  height: 16rem;
+.css-6hp17o-MuiList-root-MuiMenu-list{
+  width: 25rem !important;
 }
 
-.menu {
-  display: inline-block;
-  width: auto;
+.css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root{
+  font-size: 2rem !important;
+  font-weight: 500 !important;
+  span{
+    font-weight: 600 !important;
+  }
 }
-
-ul {
-  display: flex;
-  align-items: center;
-  list-style: none;
-}
-
-.list-item {
-  @include primary-font(2.4rem, 600);
-  font-style: normal;
-  line-height: 35px;
-  height: 35px;
-  letter-spacing: 0.001em;
-  color: #37474F;
-  margin: 0px 40px;
-  cursor: pointer;
-}
-
