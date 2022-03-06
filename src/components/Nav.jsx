@@ -24,8 +24,10 @@ const Nav = () => {
 
       <div className="menu">
         <ul>
-          <Link to="/nosotros" style={{ textDecoration: 'none' }}>
-            <li className="list-item">Sobre Nosotros</li>
+          <Link to="/nosotros" style={{ textDecoration: "none" }}>
+            <li className="list-item">
+              <Button id="basic-button">Sobre Nosotros</Button>
+            </li>
           </Link>
           <li className="list-item">
             <Button
@@ -34,9 +36,8 @@ const Nav = () => {
               aria-haspopup="true"
               aria-expanded={open ? "true" : undefined}
               onClick={handleClick}
-              style={{color: '#37474F'}}
             >
-              Productos y Servicios
+              Productos &nbsp;<p>y</p>&nbsp; Servicios
             </Button>
             <Menu
               className="basic-menu"
@@ -44,16 +45,19 @@ const Nav = () => {
               anchorEl={anchorEl}
               open={open}
               onClose={handleClose}
-              MenuListProps={{
-                "aria-labelledby": "basic-button",
-              }}
             >
-              <MenuItem onClick={handleClose}>Productos</MenuItem>
-              <MenuItem onClick={handleClose}>Servicios</MenuItem>
+              <MenuItem onClick={handleClose}></MenuItem>
+              <MenuItem onClick={handleClose}>Packs de cerveza</MenuItem>
+              <MenuItem onClick={handleClose}>Barriles</MenuItem>
+              <MenuItem onClick={handleClose}>Keezer</MenuItem>
             </Menu>
           </li>
-          <li className="list-item">Envíos</li>
-          <li className="list-item">Contacto</li>
+          <li className="list-item">
+            <Button id="basic-button">Envíos</Button>
+          </li>
+          <li className="list-item">
+            <Button id="basic-button">Contacto</Button>
+          </li>
         </ul>
       </div>
     </div>

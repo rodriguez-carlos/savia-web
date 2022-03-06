@@ -19,17 +19,20 @@
     list-style: none;
   }
   .list-item {
-    @include primary-font(2.4rem, 600);
-    font-style: normal;
-    line-height: 35px;
-    height: 35px;
-    letter-spacing: 0.001em;
-    color: #37474F;
-    margin: 0px 40px;
-    cursor: pointer;
+    #basic-button {
+      font-family: Jost;
+      font-size: 2rem;
+      text-transform: capitalize;
+      font-style: normal;
+      line-height: 35px;
+      height: 35px;
+      letter-spacing: 0.001rem;
+      color: #37474f;
+      margin: 0px 20px;
+      cursor: pointer;
+      p{
+        text-transform: lowercase;
+      }
+    }
   }
 }
-
-
-
-
