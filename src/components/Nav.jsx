@@ -47,7 +47,7 @@ const Nav = () => {
                 onClose={handleClose}
               >
                 <MenuItem onClick={handleClose} id="menu-item">
-                  Ver todo
+                  <span>Ver todo</span>
                 </MenuItem>
                 <MenuItem onClick={handleClose} id="menu-item">
                   Packs de cerveza
