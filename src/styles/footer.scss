@@ -4,7 +4,7 @@
   background: #c4c4c4;
   display: flex;
   flex-direction: column;
-  height: 40rem;
+  height: 40.6rem;
   justify-content: center;
   width: 100%;
 }
@@ -45,6 +45,7 @@
 }
 
 .terms-copyright p {
+    text-align: center;
     @include normal-font(1.6rem, 600);
     margin: 0;
     line-height: 1.5;
