@@ -5,6 +5,9 @@
   align-items: center;
   justify-content: space-between;
   margin: auto 16.4rem;
+  .hamburguer-menu {
+    display: none;
+  }
   .logo {
     width: 19.2rem;
     height: 18.3rem;
@@ -12,11 +15,11 @@
   .menu {
     display: inline-block;
     width: auto;
-  }
-  ul {
-    display: flex;
-    align-items: center;
-    list-style: none;
+    ul {
+      display: flex;
+      align-items: center;
+      list-style: none;
+    }
   }
   .list-item {
     #basic-button {
@@ -38,14 +41,58 @@
   }
 }
 
-.css-6hp17o-MuiList-root-MuiMenu-list{
+.css-6hp17o-MuiList-root-MuiMenu-list {
   width: 25rem !important;
 }
 
-.css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root{
+.css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root {
   font-size: 2rem !important;
   font-weight: 500 !important;
-  span{
+  span {
     font-weight: 600 !important;
+  }
+}
+
+@media (max-width: 1250px) {
+  .nav {
+    flex-direction: column;
+    margin-left: 1.6rem;
+    margin-right: 15.8rem;
+    .hamburguer-logo {
+      display: flex;
+      width: 100%;
+      .hamburguer-menu {
+        display: inline-block;
+        position: static;
+        font-size: 2.8rem;
+      }
+      .logo {
+        width: 8.4rem;
+        height: 7.4rem;
+        margin-left: 7rem;
+      }
+    }
+    .menu {
+      position: absolute;
+      width: 29.8rem;
+      height: 43.7rem;
+      left: -1.6rem;
+      top: 7.9rem;
+      background: #ffffff;
+      display: none;
+      ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        list-style: none;
+      }
+
+      .list-item {
+        #basic-button {
+          margin: 6.5px 0px;
+          padding: 0;
+        }
+      }
+    }
   }
 }
