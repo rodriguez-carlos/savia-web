@@ -30,9 +30,18 @@
       color: #37474f;
       margin: 0px 20px;
       cursor: pointer;
-      p{
+      p {
         text-transform: lowercase;
       }
     }
   }
+}
+
+.css-6hp17o-MuiList-root-MuiMenu-list{
+  width: 25rem !important;
+}
+
+.css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root{
+  font-size: 2rem !important;
+  font-weight: 400 !important;
 }
