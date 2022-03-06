@@ -8,19 +8,27 @@ import { Link } from "react-router-dom";
 import { GrMenu } from "react-icons/gr";
 
 const Nav = () => {
+  const [isOpen, setIsOpen] = React.useState(false);
   const [anchorEl, setAnchorEl] = React.useState(null);
+
   const open = Boolean(anchorEl);
+
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
+
   const handleClose = () => {
     setAnchorEl(null);
+  };
+
+  const handleClickHamburguer = () => {
+    setIsOpen(!isOpen);
   };
 
   return (
     <div className="nav">
       <div className="hamburguer-logo">
-        <Button className="hamburguer-menu">
+        <Button onClick={handleClickHamburguer} className="hamburguer-menu">
           <GrMenu />
         </Button>
 
@@ -29,7 +37,7 @@ const Nav = () => {
         </Link>
       </div>
 
-      <div className="menu">
+      <div className={`menu ${isOpen ? "menuOpen" : "menuClose"}`}>
         <ul>
           <Link to="/nosotros" style={{ textDecoration: "none" }}>
             <li className="list-item">

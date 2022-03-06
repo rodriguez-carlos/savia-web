@@ -72,14 +72,14 @@
         margin-left: 7rem;
       }
     }
-    .menu {
+
+    .menuOpen{
       position: absolute;
       width: 29.8rem;
       height: 43.7rem;
       left: -1.6rem;
       top: 7.9rem;
       background: #ffffff;
-      display: none;
       ul {
         display: flex;
         flex-direction: column;
@@ -94,5 +94,18 @@
         }
       }
     }
+
+    .menuClose{
+      display: none;
+      ul {
+        display:none;
+      }
+      .list-item {
+        #basic-button {
+          display: none;
+        }
+      }
+    }
+
   }
 }
