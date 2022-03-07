@@ -1,0 +1,89 @@
+@import "../typography.scss";
+
+.main-container {
+  .title {
+    margin-top: 9.4rem;
+    margin-left: 16.4rem;
+    @include primary-font(6.4rem, 700);
+  }
+
+  .cards-container {
+    height: 271.1rem;
+    .white-one {
+      position: absolute;
+      width: 568px;
+      height: 254px;
+      left: 176px;
+      top: 448px;
+
+      background: #ffffff;
+      box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .grey-one {
+      position: absolute;
+      width: 620px;
+      height: 542px;
+      left: 652px;
+      top: 474px;
+
+      background: #e5e7eb;
+      box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .grey-two {
+      position: absolute;
+      width: 545px;
+      height: 696px;
+      left: 0px;
+      top: 808px;
+
+      background: #e5e7eb;
+      box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .grey-three {
+      position: absolute;
+      width: 788px;
+      height: 400px;
+      left: 652px;
+      top: 1104px;
+
+      background: #e5e7eb;
+      box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .white-two {
+      position: absolute;
+      width: 530px;
+      height: 232px;
+      left: 555px;
+      top: 1186px;
+
+      background: #ffffff;
+      box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .grey-four {
+      position: absolute;
+      width: 1264px;
+      height: 550px;
+      left: 176px;
+      top: 1601px;
+
+      background: #e5e7eb;
+      box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .white-three {
+      position: absolute;
+      width: 396px;
+      height: 404px;
+      left: 176px;
+      top: 1671px;
+
+      background: #ffffff;
+      box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1);
+    }
+  }
+}
