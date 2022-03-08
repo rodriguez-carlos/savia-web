@@ -40,6 +40,8 @@ const About = () => {
 
 
         </div>
+
+          <p className="title-2">Como elaboramos nuestas cervezas</p>
       </div>
       <Footer />
     </div>
