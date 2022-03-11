@@ -1,24 +1,25 @@
 import "../styles/showcasecarouselitem.scss";
 import { Paper, Typography, Button } from "@mui/material";
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import image from "../static/atomo-slide-imagePlaceholder.png"
 
 const ShowcaseCarouselItem = () => {
     return (
         <Paper elevation={3} className="showcase-carousel-item">
-            <img src="https://via.placeholder.com/1441x739"
+            <img src={image}
+                height={749}
                 alt=""
                 className="showcase-carousel-item-img"
             />
             <Paper elevation={1} className="showcase-carousel-item-right">
                 <div className="showcase-carousel-item-right-content">
                     <Typography variant="h2" className="showcase-carousel-item-title">
-                        Nuestra Historia
+                        Nuestros Productos
                     </Typography>
                     <Typography variant="h5" className="showcase-carousel-item-text">
-                        Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium
+                        Conoce todas nuestras cervezas 100% artesanales.
                     </Typography>
                     <Button className="showcase-carousel-item-right-content-button">
-                        Ver Más <ArrowForwardIcon />
+                        Ver Más
                     </Button>
                 </div>
             </Paper>

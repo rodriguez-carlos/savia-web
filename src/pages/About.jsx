@@ -11,7 +11,7 @@ const About = () => {
     <div>
       <Nav />
       <div className="main-container">
-        <h1 className="title">Concoce nuesta historia</h1>
+        <h1 className="title">Conoce nuestra historia</h1>
         <div className="cards-container">
 
           <div className="grey-one">
