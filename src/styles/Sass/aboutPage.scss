@@ -97,7 +97,7 @@
   }
 }
 
-@media (max-width: 820px) {
+@media (max-width: 550px) {
   .main-container {
     height: auto;
     width: 100%;
@@ -112,6 +112,7 @@
     }
 
     .cards-container {
+      height: 155rem;
       .white-one {
         position: absolute;
         width: 29.8rem;
@@ -122,7 +123,7 @@
 
       .grey-one {
         position: absolute;
-        width: 100%;
+        width: 98%;
         height: 416px;
         left: -1px;
         top: 88px;
@@ -130,7 +131,7 @@
 
       .grey-two {
         position: absolute;
-        width: 100%;
+        width: 98%;
         height: 328px;
         left: 0px;
         top: 600px;
@@ -140,13 +141,13 @@
         position: absolute;
         width: 29.8rem;
         height: 112px;
-        left: 90px;
+        left: 6rem;
         top: 872px;
       }
 
       .grey-three {
         position: absolute;
-        width: 100%;
+        width: 98%;
         height: 464px;
         left: 0px;
         top: 1024px;
@@ -164,6 +165,12 @@
         display: none;
       }
     }
+
+    
+      .title-2{
+        width: 24.3rem;
+        @include primary-font(3rem, 600)
+      }
   }
 }
 
