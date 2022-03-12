@@ -1,4 +1,4 @@
-@import "typography";
+@import "../base/typography.scss";
 
 @mixin button($bg-color, $font-color) {
     background-color: $bg-color;
