@@ -39,6 +39,11 @@ const Nav = () => {
 
       <div className={`menu ${isOpen ? "menuOpen" : "menuClose"}`}>
         <ul>
+          <Link to="/" style={{ textDecoration: "none" }}>
+            <li className="list-item">
+              <Button id="basic-button">Inicio</Button>
+            </li>
+          </Link>
           <Link to="/nosotros" style={{ textDecoration: "none" }}>
             <li className="list-item">
               <Button id="basic-button">Sobre Nosotros</Button>
