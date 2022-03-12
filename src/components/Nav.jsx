@@ -50,7 +50,7 @@ const Nav = () => {
             </li>
           </Link>
 
-          <Link to="">
+          <Link to="" style={{ textDecoration: "none" }}>
             <li className="list-item">
               <Button
                 id="basic-button"
@@ -83,13 +83,13 @@ const Nav = () => {
             </li>
           </Link>
 
-          <Link to="/envios">
+          <Link to="/envios" style={{ textDecoration: "none" }}>
             <li className="list-item">
               <Button id="basic-button">Envíos</Button>
             </li>
           </Link>
 
-          <Link to="">
+          <Link to="" style={{ textDecoration: "none" }}>
             <li className="list-item">
               <Button id="basic-button">Contacto</Button>
             </li>
