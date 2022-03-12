@@ -2,7 +2,6 @@ import React from "react";
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
-import "../styles/nav.scss";
 import logo from "../static/sabia-10x10-03.png";
 import { Link } from "react-router-dom";
 import { GrMenu } from "react-icons/gr";
@@ -39,6 +38,11 @@ const Nav = () => {
 
       <div className={`menu ${isOpen ? "menuOpen" : "menuClose"}`}>
         <ul>
+          <Link to="/" style={{ textDecoration: "none" }}>
+            <li className="list-item">
+              <Button id="basic-button">Inicio</Button>
+            </li>
+          </Link>
           <Link to="/nosotros" style={{ textDecoration: "none" }}>
             <li className="list-item">
               <Button id="basic-button">Sobre Nosotros</Button>
