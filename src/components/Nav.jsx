@@ -43,47 +43,57 @@ const Nav = () => {
               <Button id="basic-button">Inicio</Button>
             </li>
           </Link>
+
           <Link to="/nosotros" style={{ textDecoration: "none" }}>
             <li className="list-item">
               <Button id="basic-button">Sobre Nosotros</Button>
             </li>
           </Link>
-          <li className="list-item">
-            <Button
-              id="basic-button"
-              aria-controls={open ? "basic-menu" : undefined}
-              aria-haspopup="true"
-              aria-expanded={open ? "true" : undefined}
-              onClick={handleClick}
-            >
-              Productos &nbsp;<p>y</p>&nbsp; Servicios
-            </Button>
-            <Menu
-              id="lock-menu"
-              anchorEl={anchorEl}
-              open={open}
-              onClose={handleClose}
-            >
-              <MenuItem onClick={handleClose} id="menu-item">
-                <span>Ver todo</span>
-              </MenuItem>
-              <MenuItem onClick={handleClose} id="menu-item">
-                Packs de cerveza
-              </MenuItem>
-              <MenuItem onClick={handleClose} id="menu-item">
-                Barriles
-              </MenuItem>
-              <MenuItem onClick={handleClose} id="menu-item">
-                Keezer
-              </MenuItem>
-            </Menu>
-          </li>
-          <li className="list-item">
-            <Button id="basic-button">Envíos</Button>
-          </li>
-          <li className="list-item">
-            <Button id="basic-button">Contacto</Button>
-          </li>
+
+          <Link to="">
+            <li className="list-item">
+              <Button
+                id="basic-button"
+                aria-controls={open ? "basic-menu" : undefined}
+                aria-haspopup="true"
+                aria-expanded={open ? "true" : undefined}
+                onClick={handleClick}
+              >
+                Productos &nbsp;<p>y</p>&nbsp; Servicios
+              </Button>
+              <Menu
+                id="lock-menu"
+                anchorEl={anchorEl}
+                open={open}
+                onClose={handleClose}
+              >
+                <MenuItem onClick={handleClose} id="menu-item">
+                  <span>Ver todo</span>
+                </MenuItem>
+                <MenuItem onClick={handleClose} id="menu-item">
+                  Packs de cerveza
+                </MenuItem>
+                <MenuItem onClick={handleClose} id="menu-item">
+                  Barriles
+                </MenuItem>
+                <MenuItem onClick={handleClose} id="menu-item">
+                  Keezer
+                </MenuItem>
+              </Menu>
+            </li>
+          </Link>
+
+          <Link to="/envios">
+            <li className="list-item">
+              <Button id="basic-button">Envíos</Button>
+            </li>
+          </Link>
+
+          <Link to="">
+            <li className="list-item">
+              <Button id="basic-button">Contacto</Button>
+            </li>
+          </Link>
         </ul>
       </div>
     </div>
