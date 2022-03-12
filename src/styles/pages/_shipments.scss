@@ -1,0 +1,114 @@
+@import "../base/typography";
+
+.shipments-container {
+  margin: 4rem 10.2vw 18rem 10.2vw;
+  height: 80vh;
+  .title-one {
+    display: inline-block;
+    width: 54.3rem;
+    height: 18.4rem;
+    letter-spacing: -0.5px;
+    @include primary-font(6.4rem, 700);
+  }
+  .map-description-container {
+    display: flex;
+    .description-container {
+      width: 27vw;
+      margin-top: 3rem;
+      .subtitle {
+        display: inline-block;
+        @include primary-font(3rem, 500);
+      }
+      .list-items {
+        margin-left: 4.2rem;
+        @include primary-font(2rem, 400);
+      }
+
+      .item {
+        @include primary-font(2rem, 400);
+        margin-top: 2rem;
+      }
+      .horario {
+        @include primary-font(2rem, 400);
+        margin-top: 2rem;
+      }
+    }
+
+    .map-container {
+      position: absolute;
+      background-color: grey;
+      width: 45vw;
+      height: 493px;
+      left: 40vw;
+      top: 35rem;
+    }
+  }
+
+  #button {
+    @include normal-font(1.7rem, 400);
+    background: #259193;
+    color: aliceblue;
+    width: 19.3rem;
+    letter-spacing: 1.25px;
+    text-transform: uppercase;
+    padding: 1rem 1rem;
+    line-height: 16px;
+    margin-top: 5rem;
+    &:hover {
+      background: #246566;
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .shipments-container {
+    height: auto;
+    width: 100%;
+    margin: 0;
+    margin-bottom: 5rem;
+    .title-one {
+      width: 100%;
+      @include primary-font(5rem, 700);
+      padding: 0 4rem;
+    }
+  }
+  .map-description-container {
+    flex-direction: column-reverse;
+    margin: 0 3.2rem;
+    #description-container {
+      width: 63.3rem;
+    }
+    #map {
+      position: static;
+      width: 100%;
+    }
+  }
+
+  #button {
+    width: 22rem !important;
+    padding: 2rem 1rem !important;
+    margin-left: 3.2rem;
+  }
+}
+
+
+@media (max-width: 550px) {
+  .shipments-container {
+    height: auto;
+    width: 100%;
+    .title-one {
+      width: 100%rem;
+      @include primary-font(4rem, 700);
+    }
+  }
+  .map-description-container {
+    flex-direction: column-reverse;
+    #description-container {
+      width: 100%;
+    }
+    #description-container > #map {
+      position: static;
+      width: 120vw;
+    }
+  }
+}
