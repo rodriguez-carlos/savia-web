@@ -5,12 +5,13 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 AOS.init();
+
 const About = () => {
   return (
     <div>
       <Nav />
       <div className="main-container">
-        <h1 className="title">Concoce nuesta historia</h1>
+        <h1 className="title">Conoce nuesta historia</h1>
         <div className="cards-container">
           <div className="grey-one"></div>
           <div className="white-one" data-aos="fade-right">
