@@ -18,9 +18,8 @@ const About = () => {
               Savia es una cervecería artesanal
             </p>
             <p>
-              Savia es una cervecería artesanal Nosotros elaboramos y vendemos
-              variados estilos y formatos de cerveza en la zona de Concón,
-              Región de Valparaiso, Chile.
+              Nosotros elaboramos y vendemos variados estilos y formatos de
+              cerveza en la zona de Concón, Región de Valparaiso, Chile.
             </p>
           </div>
 
