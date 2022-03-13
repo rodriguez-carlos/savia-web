@@ -27,10 +27,10 @@ const ShowcaseCarousel = () => {
                 backgroundColor: '#263238'
             }
         }}
-        navButtonsProps={{          // Change the colors and radius of the actual buttons. THIS STYLES BOTH BUTTONS
+        navButtonsProps={{
             style: {
-                backgroundColor: 'cornflowerblue',
-                borderRadius: 0
+                backgroundColor: "rgba(238, 233, 212, 1)",
+                color: "#928E8E"
             }
         }}
     >
