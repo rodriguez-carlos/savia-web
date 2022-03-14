@@ -8,7 +8,7 @@
   }
 
   .cards-container {
-    height: 200rem;
+    height: 185rem;
     .white-one {
       position: absolute;
       width: 56.8rem;
@@ -37,6 +37,7 @@
 
       background-image: url(../../static/gery1.png);
       background-size: cover;
+      background-position: center;
       box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1);
     }
 
@@ -49,6 +50,7 @@
 
       background-image: url(../../static/grey2.png);
       background-size: cover;
+      background-position: center;
       box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1);
     }
 
@@ -61,6 +63,7 @@
 
       background-image: url(../../static/grey4.png);
       background-size: cover;
+      background-position: center;
       box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1);
     }
 
@@ -134,7 +137,6 @@
       height: 128px;
       left: -3px;
       top: 88px;
-      @include primary-font(3.9rem, 600);
       z-index: 1;
     }
 
@@ -147,10 +149,10 @@
         left: 0px;
         top: 432px;
 
-        @include normal-font(1rem, 400);
+        @include normal-font(1.5rem, 400);
         padding: 1.5rem 0.4rem 2.2rem 1.6rem;
         .white-element__title {
-          @include normal-font(1.4rem, 600);
+          @include normal-font(1.7rem, 600);
           margin-bottom: 1rem;
           line-height: 0.5rem;
         }
@@ -161,7 +163,7 @@
         width: 98%;
         height: 416px;
         left: -1px;
-        top: 88px;
+        top: 196px;
       }
 
       .grey-two {
@@ -169,7 +171,7 @@
         width: 98%;
         height: 328px;
         left: 0px;
-        top: 600px;
+        top: 650px;
       }
 
       .white-two {
@@ -179,10 +181,10 @@
         left: 6rem;
         top: 872px;
 
-        @include normal-font(1rem, 400);
+        @include normal-font(1.5rem, 400);
         padding: 1.5rem 0.4rem 2.2rem 1.6rem;
         .white-element__title-two {
-          @include normal-font(1.4rem, 600);
+          @include normal-font(1.7rem, 600);
           margin-bottom: 1rem;
           line-height: 0.5rem;
           margin: 0 0 1rem;
@@ -204,12 +206,12 @@
         left: 0px;
         top: 1408px;
 
-        @include normal-font(1rem, 400);
+        @include normal-font(1.5rem, 400);
         padding: 1.5rem 0.4rem 2.2rem 1.6rem;
         .white-element__title {
-          @include normal-font(1.4rem, 600);
+          @include normal-font(1.7rem, 600);
           margin-bottom: 1rem;
-          line-height: 0.5rem;
+          line-height: 1.5rem;
         }
       }
 
@@ -221,6 +223,14 @@
     .title-2 {
       width: 24.3rem;
       @include primary-font(3rem, 600);
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .main-container {
+    .title {
+      @include primary-font(3.9rem, 600);
     }
   }
 }

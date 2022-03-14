@@ -3,14 +3,16 @@ import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { SwiperSlider } from "../components/SwiperSlider";
 
 AOS.init();
+
 const About = () => {
   return (
     <div>
       <Nav />
       <div className="main-container">
-        <h1 className="title">Concoce nuesta historia</h1>
+        <h1 className="title">Conoce nuesta historia</h1>
         <div className="cards-container">
           <div className="grey-one"></div>
           <div className="white-one" data-aos="fade-right">
@@ -49,6 +51,8 @@ const About = () => {
         </div>
         <p className="title-2">Como elaboramos nuestas cervezas</p>
       </div>
+
+      <SwiperSlider/>
       <Footer />
     </div>
   );
