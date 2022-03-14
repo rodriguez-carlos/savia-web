@@ -3,6 +3,7 @@ import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { SwiperSlider } from "../components/SwiperSlider";
 
 AOS.init();
 
@@ -50,6 +51,8 @@ const About = () => {
         </div>
         <p className="title-2">Como elaboramos nuestas cervezas</p>
       </div>
+
+      <SwiperSlider/>
       <Footer />
     </div>
   );

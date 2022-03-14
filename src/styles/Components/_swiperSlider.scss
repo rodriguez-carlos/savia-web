@@ -1,0 +1,32 @@
+@import "../base/typography";
+
+.mySwiper {
+  .slide-item {
+    display: flex;
+    padding: 47px 24px;
+    width: 72.8rem;
+    height: 248px;
+    left: 0px;
+    top: 0px;
+    margin: 27px 0px;
+    background: #ffffff;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1);
+    .slide-item-description {
+      display: inline-block;
+      width: 500%;
+      height: 154px;
+      .slide-description-tittle{
+        @include normal-font(3rem, 700);
+        color: #d15248;
+      }
+    }
+    .slide-item-img {
+      display: inline-block;
+      width: 50%;
+      height: 154px;
+    }
+  }
+  .one {
+    margin-left: 191px;
+  }
+}
