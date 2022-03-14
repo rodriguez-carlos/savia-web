@@ -5,6 +5,7 @@ import MenuItem from "@mui/material/MenuItem";
 import logo from "../static/sabia-10x10-03.png";
 import { Link } from "react-router-dom";
 import { GrMenu } from "react-icons/gr";
+import { AiOutlineDown } from "react-icons/ai";
 
 const Nav = () => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -59,7 +60,8 @@ const Nav = () => {
                 aria-expanded={open ? "true" : undefined}
                 onClick={handleClick}
               >
-                Productos &nbsp;<p>y</p>&nbsp; Servicios
+                Productos &nbsp;<p>y</p>&nbsp; Servicios &nbsp;
+                <AiOutlineDown />
               </Button>
               <Menu
                 id="lock-menu"
