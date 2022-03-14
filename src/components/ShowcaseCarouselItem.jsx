@@ -1,4 +1,3 @@
-import "../styles/showcasecarouselitem.scss";
 import { Paper, Typography, Button } from "@mui/material";
 import image from "../static/atomo-slide-imagePlaceholder.png"
 

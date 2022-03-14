@@ -1,11 +1,12 @@
 import React from "react";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
-import  '../styles/Sass/aboutPage.scss';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { SwiperSlider } from "../components/SwiperSlider";
 
 AOS.init();
+
 const About = () => {
   return (
     <div>
@@ -13,34 +14,45 @@ const About = () => {
       <div className="main-container">
         <h1 className="title">Conoce nuestra historia</h1>
         <div className="cards-container">
-
-          <div className="grey-one">
-          </div>
+          <div className="grey-one"></div>
           <div className="white-one" data-aos="fade-right">
-            <h3>Lorem ipsum dolor</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero similique quisquam explicabo sit nam doloribus modi dignissimos! Praesentium officiis cum ad in et? Autem unde, ducimus repudiandae commodi laudantium enim!</p>
+            <p className="white-element__title">
+              Savia es una cervecería artesanal
+            </p>
+            <p>
+              Nosotros elaboramos y vendemos variados estilos y formatos de
+              cerveza en la zona de Concón, Región de Valparaiso, Chile.
+            </p>
           </div>
 
-          <div className="grey-two" data-aos="fade-left">
-          </div>
+          <div className="grey-two" data-aos="fade-left"></div>
 
-          <div className="grey-three" data-aos="fade-right">
-          </div>
+          <div className="grey-three" data-aos="fade-right"></div>
           <div className="white-two" data-aos="fade-right">
-            <h3>Lorem ipsum dolor</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero similique quisquam explicabo sit nam doloribus modi dignissimos! Praesentium officiis cum ad in et? Autem unde, ducimus repudiandae commodi laudantium enim!</p>
+            <p className="white-element__title-two">
+              Somos una empresa independiente
+            </p>
+            <p>
+              Nuestros fundadores Benja, Seba y Nico, son amigos y socios que
+              trabajan para ofrecer una cerveza artesanal de calidad.
+            </p>
           </div>
 
-          <div className="grey-four" data-aos="fade-right">
-          </div>
+          <div className="grey-four" data-aos="fade-right"></div>
           <div className="white-three" data-aos="fade-left">
-            <h3>Lorem ipsum dolor</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero similique quisquam explicabo sit nam doloribus modi dignissimos! Praesentium officiis cum ad in et? Autem unde, ducimus repudiandae commodi laudantium enim!</p>
+            <p className="white-element__title">
+              Buscamos crear economías circulares
+            </p>
+            <p>
+              Potenciando el mercado local y siendo a su vez, conscientes del
+              medio ambiente.
+            </p>
           </div>
-
-
         </div>
+        <p className="title-2">Como elaboramos nuestas cervezas</p>
       </div>
+
+      <SwiperSlider/>
       <Footer />
     </div>
   );

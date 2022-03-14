@@ -1,4 +1,3 @@
-import "../styles/footer.scss";
 import { BsInstagram } from 'react-icons/bs';
 import { BsWhatsapp } from 'react-icons/bs';
 import { AiOutlineMail } from 'react-icons/ai';
