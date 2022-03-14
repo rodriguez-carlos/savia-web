@@ -12,7 +12,7 @@ const About = () => {
     <div>
       <Nav />
       <div className="main-container">
-        <h1 className="title">Conoce nuesta historia</h1>
+        <h1 className="title">Conoce nuestra historia</h1>
         <div className="cards-container">
           <div className="grey-one"></div>
           <div className="white-one" data-aos="fade-right">

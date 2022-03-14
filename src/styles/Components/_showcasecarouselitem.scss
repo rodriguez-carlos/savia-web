@@ -2,9 +2,16 @@
 .showcase-carousel-item {
     display: flex;
     flex-direction: row;
-    background-color: red;
-    max-width: 1441px;
+    // max-width: 1441px;
+    // max-height: 749px;
     position: relative;
+    min-height: 60rem;
+    margin: auto;
+
+    .showcase-carousel-item-img {
+        width: 100%;
+        object-fit: cover;
+    }
 
     .showcase-carousel-item-title {
         @include primary-font(6.4rem, 700);
@@ -19,11 +26,11 @@
     }
 
     .showcase-carousel-item-right {
-        background-color: rgba(255, 255, 255, 0.5);
-        width: 50%;
+        background-color: rgba(255, 255, 255, 0.85);
+        width: 30.98%;
         height: 100%;
         position: absolute;
-        margin-left: 50%;
+        margin-left: 69.02%;
 
         .showcase-carousel-item-right-content {
             margin: 30% 15%;
@@ -33,7 +40,7 @@
             align-items: flex-start;
 
             .showcase-carousel-item-right-content-button {
-                @include button(#37474F, white);
+                @include button(#259193, white);
                 margin-top: 9.5rem;
             }
         }

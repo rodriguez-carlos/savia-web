@@ -1,7 +1,8 @@
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 import ProductCard from "../components/ProductCard";
-import ShowcaseCarouselItem from "../components/ShowcaseCarouselItem";
+import ShowcaseCarousel from "../components/ShowcaseCarousel";
+import ProductCardsContainer from "../components/ProductCardsContainer";
 
 const Home = () => {
   return (
@@ -9,8 +10,8 @@ const Home = () => {
       <header>
         <Nav />
       </header>
-      <ProductCard />
-      <ShowcaseCarouselItem />
+      <ShowcaseCarousel />
+      <ProductCardsContainer />
       <Footer />
     </>
   );

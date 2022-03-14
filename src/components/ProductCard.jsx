@@ -17,10 +17,10 @@ const ProductCard = ({product}) => {
                 sx={{borderRadius: "5px"}}
             />
             <CardContent align="left">
-                <Typography gutterBottom variant="h5" component="div" fontWeight={600}>
+                <Typography gutterBottom variant="h4" component="div" fontWeight={600}>
                     {product ? product.name : "Beer Name"}
                 </Typography>
-                <Typography>
+                <Typography variant="h5">
                     {product ? product.description : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."}
                 </Typography>
                 <Button variant="outlined" 
