@@ -1,4 +1,4 @@
-import "../styles/productcardscontainer.scss";
+import "../styles/Components/_productcardscontainer.scss";
 import { Grid, Typography } from "@mui/material";
 import ProductCard from "./ProductCard";
 

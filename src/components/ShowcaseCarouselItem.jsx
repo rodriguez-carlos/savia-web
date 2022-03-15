@@ -1,7 +1,7 @@
 import { Paper, Typography, Button } from "@mui/material";
 import image from "../static/atomo-slide-imagePlaceholder.png"
 
-const ShowcaseCarouselItem = () => {
+const ShowcaseCarouselItem = ({textOnLeft}) => {
     return (
         <Paper elevation={3} className="showcase-carousel-item">
             <img src={image}
@@ -9,7 +9,12 @@ const ShowcaseCarouselItem = () => {
                 alt=""
                 className="showcase-carousel-item-img"
             />
-            <Paper elevation={1} className="showcase-carousel-item-right">
+            <Paper elevation={1} className=
+                {
+                    textOnLeft ? "showcase-carousel-item-right text-on-left" :
+                    "showcase-carousel-item-right"
+                }
+                >
                 <div className="showcase-carousel-item-right-content">
                     <Typography variant="h2" className="showcase-carousel-item-title">
                         Nuestros Productos
