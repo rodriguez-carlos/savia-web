@@ -7,9 +7,7 @@ import ProductCardsContainer from "../components/ProductCardsContainer";
 const Home = () => {
   return (
     <>
-      <header>
-        <Nav />
-      </header>
+      <Nav />
       <ShowcaseCarousel />
       <ProductCardsContainer />
       <Footer />
