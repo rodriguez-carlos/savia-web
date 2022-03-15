@@ -1,0 +1,25 @@
+@import "../base/typography";
+
+.product-cards-container {
+    margin: 11.1rem auto;
+    width: 77%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .product-cards-container-title{
+        text-align: center;
+        @include primary-font(5.5rem, 500);
+    }
+
+    .product-cards-container-text{
+        text-align: center;
+        @include normal-font(3.6rem, 400);
+    }
+
+    .product-cards-container-grid {
+        margin-top: 6.7rem;
+        display: flex;
+        justify-content: space-around;
+    }
+}
