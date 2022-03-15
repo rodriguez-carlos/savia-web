@@ -10,7 +10,7 @@ export const SwiperSlider = () => {
     <>
       <Swiper slidesPerView={2} spaceBetween={30} className="mySwiper">
         <SwiperSlide className="slide-item one">
-          <div className="silde-item-description">
+          <div style={{ width: "27rem" }}>
             <p
               style={{
                 color: "#d15248",
@@ -35,7 +35,7 @@ export const SwiperSlider = () => {
           <div className="slide-item-img"></div>
         </SwiperSlide>
         <SwiperSlide className="slide-item">
-          <div className="silde-item-description">
+          <div style={{width: "40rem"}}>
             <p
               style={{
                 color: "#d15248",
@@ -62,7 +62,7 @@ export const SwiperSlider = () => {
           <div className="slide-item-img"></div>
         </SwiperSlide>
         <SwiperSlide className="slide-item">
-          <div className="silde-item-description">
+          <div style={{width: "38rem"}}>
             <p
               style={{
                 color: "#d15248",
@@ -86,10 +86,10 @@ export const SwiperSlider = () => {
               proceso se le denomina “wort”.
             </p>
           </div>
-          <div className="slide-item-img"></div>
+          <div style={{width: "38rem"}}></div>
         </SwiperSlide>
         <SwiperSlide className="slide-item">
-          <div className="silde-item-description">
+          <div style={{width: "40rem"}}>
             <p
               style={{
                 color: "#d15248",
@@ -116,7 +116,7 @@ export const SwiperSlider = () => {
           <div className="slide-item-img"></div>
         </SwiperSlide>
         <SwiperSlide className="slide-item">
-          <div className="silde-item-description">
+          <div style={{width:"25rem"}}>
             <p
               style={{
                 color: "#d15248",
