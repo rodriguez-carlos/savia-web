@@ -31,11 +31,44 @@ export const SwiperSlider = () => {
               Se muele el grano de la malta exponiendo las enzimas y otros
               componentes para prepararlos para el paso siguiente.
             </p>
+            <div
+              style={{
+                display: "flex",
+              }}
+            >
+              <div
+                style={{
+                  position: "absolute",
+                  width: "106px",
+                  height: "27px",
+                  background: "#E9C969",
+                  borderRadius: "40px",
+                  textAlign: "center",
+                  top: "calc(60% - 27px/2 + 137.5px)",
+                  fontFamily: "Roboto",
+                  fontWeight: 500,
+                  fontSize: "1.6rem",
+                  padding: "0.5rem 0",
+                }}
+              >
+                1°PASO
+              </div>
+              <div
+                style={{
+                  position: "absolute",
+                  width: "596px",
+                  height: "0px",
+                  left: "132px",
+                  top: "284px",
+                  border: "1px solid #252424",
+                }}
+              ></div>
+            </div>
           </div>
           <div className="slide-item-img"></div>
         </SwiperSlide>
         <SwiperSlide className="slide-item">
-          <div style={{width: "40rem"}}>
+          <div style={{ width: "40rem" }}>
             <p
               style={{
                 color: "#d15248",
@@ -58,11 +91,45 @@ export const SwiperSlider = () => {
               hervor para obtener resultados variados de amargor, sabor y aroma
               final en la cerveza.
             </p>
+
+            <div
+              style={{
+                display: "flex",
+              }}
+            >
+              <div
+                style={{
+                  position: "absolute",
+                  width: "106px",
+                  height: "27px",
+                  background: "#E9C969",
+                  borderRadius: "40px",
+                  textAlign: "center",
+                  top: "calc(60% - 27px/2 + 137.5px)",
+                  fontFamily: "Roboto",
+                  fontWeight: 500,
+                  fontSize: "1.6rem",
+                  padding: "0.5rem 0",
+                }}
+              >
+                2°PASO
+              </div>
+              <div
+                style={{
+                  position: "absolute",
+                  width: "596px",
+                  height: "0px",
+                  left: "132px",
+                  top: "284px",
+                  border: "1px solid #252424",
+                }}
+              ></div>
+            </div>
           </div>
           <div className="slide-item-img"></div>
         </SwiperSlide>
         <SwiperSlide className="slide-item">
-          <div style={{width: "38rem"}}>
+          <div style={{ width: "38rem" }}>
             <p
               style={{
                 color: "#d15248",
@@ -85,11 +152,45 @@ export const SwiperSlider = () => {
               grano en azúcares fermentables. El líquido resultante de este
               proceso se le denomina “wort”.
             </p>
+
+            <div
+              style={{
+                display: "flex",
+              }}
+            >
+              <div
+                style={{
+                  position: "absolute",
+                  width: "106px",
+                  height: "27px",
+                  background: "#E9C969",
+                  borderRadius: "40px",
+                  textAlign: "center",
+                  top: "calc(60% - 27px/2 + 137.5px)",
+                  fontFamily: "Roboto",
+                  fontWeight: 500,
+                  fontSize: "1.6rem",
+                  padding: "0.5rem 0",
+                }}
+              >
+                3°PASO
+              </div>
+              <div
+                style={{
+                  position: "absolute",
+                  width: "596px",
+                  height: "0px",
+                  left: "132px",
+                  top: "284px",
+                  border: "1px solid #252424",
+                }}
+              ></div>
+            </div>
           </div>
-          <div style={{width: "38rem"}}></div>
+          <div style={{ width: "38rem" }}></div>
         </SwiperSlide>
         <SwiperSlide className="slide-item">
-          <div style={{width: "40rem"}}>
+          <div style={{ width: "40rem" }}>
             <p
               style={{
                 color: "#d15248",
@@ -112,17 +213,51 @@ export const SwiperSlider = () => {
               apto para la levadura, esta se encarga de transformar los azúcares
               en alcohol.
             </p>
+
+            <div
+              style={{
+                display: "flex",
+              }}
+            >
+              <div
+                style={{
+                  position: "absolute",
+                  width: "106px",
+                  height: "27px",
+                  background: "#E9C969",
+                  borderRadius: "40px",
+                  textAlign: "center",
+                  top: "calc(60% - 27px/2 + 137.5px)",
+                  fontFamily: "Roboto",
+                  fontWeight: 500,
+                  fontSize: "1.6rem",
+                  padding: "0.5rem 0",
+                }}
+              >
+                4°PASO
+              </div>
+              <div
+                style={{
+                  position: "absolute",
+                  width: "596px",
+                  height: "0px",
+                  left: "132px",
+                  top: "284px",
+                  border: "1px solid #252424",
+                }}
+              ></div>
+            </div>
           </div>
           <div className="slide-item-img"></div>
         </SwiperSlide>
         <SwiperSlide className="slide-item">
-          <div style={{width:"25rem"}}>
+          <div style={{ width: "25rem" }}>
             <p
               style={{
                 color: "#d15248",
                 fontSize: "3rem",
                 fontWeight: 700,
-                lineHeight: "4rem"
+                lineHeight: "4rem",
               }}
             >
               Condicionamiento:
@@ -131,12 +266,46 @@ export const SwiperSlider = () => {
               style={{
                 fontSize: "2rem",
                 fontWeight: 400,
-                lineHeight: "2.5rem"
+                lineHeight: "2.5rem",
               }}
             >
               Se deja madurar la cerveza, disminuyendo o eliminando subproductos
               indeseados
             </p>
+
+            <div
+              style={{
+                display: "flex",
+              }}
+            >
+              <div
+                style={{
+                  position: "absolute",
+                  width: "106px",
+                  height: "27px",
+                  background: "#E9C969",
+                  borderRadius: "40px",
+                  textAlign: "center",
+                  top: "calc(60% - 27px/2 + 137.5px)",
+                  fontFamily: "Roboto",
+                  fontWeight: 500,
+                  fontSize: "1.6rem",
+                  padding: "0.5rem 0",
+                }}
+              >
+                5°PASO
+              </div>
+              <div
+                style={{
+                  position: "absolute",
+                  width: "596px",
+                  height: "0px",
+                  left: "132px",
+                  top: "284px",
+                  border: "1px solid #252424",
+                }}
+              ></div>
+            </div>
           </div>
           <div className="slide-item-img"></div>
         </SwiperSlide>
