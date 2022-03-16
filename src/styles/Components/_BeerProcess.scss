@@ -1,0 +1,87 @@
+.beer-process-container {
+  padding: 0 4.2rem;
+  display: flex;
+  height: 41.5rem;
+  justify-content: center;
+  .info-img {
+    padding: 0 4.9rem;
+    .image {
+      height: 50%;
+      width: 100%;
+      background-color: grey;
+    }
+    .info-title {
+      color: #d15248;
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 40px;
+    }
+    .info-text {
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 14.75px;
+    }
+  }
+
+  .lateral {
+    .pasos {
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 16px;
+    }
+    .number {
+      background: #e9c969;
+      border-radius: 40px;
+      text-align: center;
+      width: 44px;
+      height: 16px;
+      left: calc(50% - 44px / 2 - 97.5px);
+      top: calc(50% - 16px / 2 - 155px);
+      margin-bottom: 1rem;
+      font-size: 16px;
+      font-family: "Roboto";
+      font-weight: 500;
+    }
+    .line-one {
+      border: 0.5px solid #252424;
+      position: absolute;
+      height: 305.5px;
+      width: 0px;
+      left: 64px;
+    }
+    .line-two {
+      border: 0.5px solid #252424;
+      position: absolute;
+      height: 305.5px;
+      width: 0px;
+      left: 64px;
+    }
+    .line-three {
+      border: 0.5px solid #252424;
+      position: absolute;
+      height: 305.5px;
+      width: 0px;
+      left: 64px;
+    }
+    .line-four {
+      border: 0.5px solid #252424;
+      position: absolute;
+      height: 305.5px;
+      width: 0px;
+      left: 64px;
+    }
+    .line-five {
+      border: 0.5px solid #252424;
+      position: absolute;
+      height: 305.5px;
+      width: 0px;
+      left: 64px;
+    }
+  }
+}
