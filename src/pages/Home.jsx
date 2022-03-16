@@ -7,9 +7,7 @@ import ShowcaseCarouselItem from "../components/ShowcaseCarouselItem";
 const Home = () => {
   return (
     <>
-      <header>
-        <Nav />
-      </header>
+      <Nav />
       <ShowcaseCarousel />
       <ProductCardsContainer />
       <ShowcaseCarouselItem textOnLeft />

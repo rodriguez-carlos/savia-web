@@ -1,0 +1,43 @@
+@import "../base/typography";
+
+form {
+    margin: 6.2rem auto 0;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+
+    br{
+        height: 0
+    }
+
+    label {
+        @include normal-font(2.4rem, 500);
+    }
+
+    input, textarea {
+        background: #928E8E;
+        opacity: 0.25;
+        border-radius: 20px;
+        width: 100%;
+        margin-top: 0.6rem;
+        margin-bottom: 2.4rem;
+        height: 6.3rem;
+        @include normal-font(2.4rem, 500);
+
+    }
+    textarea {
+        height: 24.7rem;
+    }
+    input#submit {
+        background: #259193;
+        border: 1px solid #259193;
+        opacity: 100%;
+        color: #ffffff;
+        box-sizing: border-box;
+        border-radius: 40px;
+        width: 13.8rem;
+        margin-right: 0%;
+        align-self: flex-end;
+        cursor: pointer;
+    }
+}
