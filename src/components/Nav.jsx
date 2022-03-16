@@ -91,7 +91,7 @@ const Nav = () => {
             </li>
           </Link>
 
-          <Link to="" style={{ textDecoration: "none" }}>
+          <Link to="/contacto" style={{ textDecoration: "none" }}>
             <li className="list-item">
               <Button id="basic-button">Contacto</Button>
             </li>
