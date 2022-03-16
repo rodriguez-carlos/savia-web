@@ -1,13 +1,28 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { SwiperSlider } from "../components/SwiperSlider";
+import BeerProcess from "../components/BeerProcess";
 
 AOS.init();
 
 const About = () => {
+  const [windowWidth, setwindowWidth] = useState(window.innerWidth);
+
+  const handleWidthScreenChange = () => {
+    setwindowWidth(window.innerWidth);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", handleWidthScreenChange);
+
+    return () => {
+      window.addEventListener("resize", handleWidthScreenChange);
+    };
+  });
+
   return (
     <div>
       <Nav />
@@ -51,8 +66,7 @@ const About = () => {
         </div>
         <p className="title-2">Como elaboramos nuestas cervezas</p>
       </div>
-
-      <SwiperSlider/>
+      {windowWidth > 820 ? <SwiperSlider /> : <BeerProcess />}
       <Footer />
     </div>
   );

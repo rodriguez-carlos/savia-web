@@ -8,7 +8,7 @@ import "swiper/scss/pagination";
 export const SwiperSlider = () => {
   return (
     <>
-      <Swiper slidesPerView={2} spaceBetween={30} className="mySwiper">
+      <Swiper slidesPerView={2} spaceBetween={30} className= "mySwiper">
         <SwiperSlide className="slide-item one">
           <div style={{ width: "27rem" }}>
             <p
