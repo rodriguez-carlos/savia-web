@@ -1,4 +1,24 @@
-// .card-button {
-//     border-radius: 15px;
-// } 
-  
+@import "../base/typography";
+@import "../Components/components";
+
+.product-card {
+    width: 251px;
+    height: 572px;
+
+    .product-card-title {
+        @include normal-font(2rem, 600);
+        line-height: 2.4rem;
+    }
+    .product-card-description {
+        @include normal-font(1.6rem, 400);
+        line-height: 18.75px;
+    }
+    .product-card-button {
+        @include normal-font(1.6rem, 700);
+        color: #259193;
+        line-height: 1.6rem;
+        border: 0px;
+        margin: 4.8rem 0 2.5rem 0;
+        padding: 0;
+    }
+}
