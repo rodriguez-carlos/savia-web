@@ -25,8 +25,7 @@ const Shimpments = () => {
             </ul>
 
             <p className="horario">
-              *(Sí tu compra es de $16.600 o más) Días: Martes y Viernes.
-              Horario: Entre las 14 y 18 hs.
+              *(Sí tu compra es de $16.600 o más)
             </p>
             <p className="horario">Días: Martes y Viernes.</p>
             <p className="horario">Horario: Entre las 14 y 18 hs.</p>
