@@ -65,7 +65,7 @@ export const SwiperSlider = () => {
               ></div>
             </div>
           </div>
-          <div className="slide-item-img"></div>
+          <div className="slide-item-img one"></div>
         </SwiperSlide>
         <SwiperSlide className="slide-item">
           <div style={{ width: "40rem" }}>
@@ -126,7 +126,7 @@ export const SwiperSlider = () => {
               ></div>
             </div>
           </div>
-          <div className="slide-item-img"></div>
+          <div className="slide-item-img two"></div>
         </SwiperSlide>
         <SwiperSlide className="slide-item">
           <div style={{ width: "38rem" }}>
@@ -187,7 +187,7 @@ export const SwiperSlider = () => {
               ></div>
             </div>
           </div>
-          <div style={{ width: "38rem" }}></div>
+          <div className="slide-item-img three"></div>
         </SwiperSlide>
         <SwiperSlide className="slide-item">
           <div style={{ width: "40rem" }}>
@@ -248,7 +248,7 @@ export const SwiperSlider = () => {
               ></div>
             </div>
           </div>
-          <div className="slide-item-img"></div>
+          <div className="slide-item-img four"></div>
         </SwiperSlide>
         <SwiperSlide className="slide-item">
           <div style={{ width: "25rem" }}>
@@ -307,7 +307,7 @@ export const SwiperSlider = () => {
               ></div>
             </div>
           </div>
-          <div className="slide-item-img"></div>
+          <div className="slide-item-img five"></div>
         </SwiperSlide>
       </Swiper>
     </>

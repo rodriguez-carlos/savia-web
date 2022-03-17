@@ -10,7 +10,7 @@ const BeerProcess = () => {
           <div className="line-one"></div>
         </div>
         <div className="info-img">
-          <div className="image"></div>
+          <div className="image one"></div>
           <p className="info-title">Molienda:</p>
           <p className="info-text">
             Se muele el grano de la malta exponiendo las enzimas y otros
@@ -24,7 +24,7 @@ const BeerProcess = () => {
           <div className="line-two"></div>
         </div>
         <div className="info-img">
-          <div className="image"></div>
+          <div className="image two"></div>
           <p className="info-title">Cocción:</p>
           <p className="info-text">
             Para esterilizar se hierve el “wort” por 60 a 120 minutos. Además se
@@ -40,7 +40,7 @@ const BeerProcess = () => {
           <div className="line-three"></div>
         </div>
         <div className="info-img">
-          <div className="image"></div>
+          <div className="image three"></div>
           <p className="info-title">Maceración:</p>
           <p className="info-text">
             Se mezcla la malta molida con agua a una temperatura entre 65° y 75°
@@ -56,7 +56,7 @@ const BeerProcess = () => {
           <div className="line-four"></div>
         </div>
         <div className="info-img">
-          <div className="image"></div>
+          <div className="image four"></div>
           <p className="info-title">Fermentación:</p>
           <p className="info-text">
             Se le agrega levadura al líquido enfriado del proceso anterior.
@@ -72,7 +72,7 @@ const BeerProcess = () => {
           <div className="line-five"></div>
         </div>
         <div className="info-img">
-          <div className="image"></div>
+          <div className="image five"></div>
           <p className="info-title">Condicionamiento:</p>
           <p className="info-text">
             Se deja madurar la cerveza, disminuyendo o eliminando subproductos

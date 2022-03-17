@@ -11,17 +11,42 @@
     margin: 100px 0px;
     background: #ffffff;
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1);
+
     .slide-item-img {
       display: inline-block;
-      width: 50%;
-      height: 154px;
+      width: 200px;
+      height: 170px;
+      background-size: cover;
+      background-position: center;
     }
+
+    .one {
+      background-image: url(../../static/1.png);
+    }
+
+    .two {
+      background-image: url(../../static/2.png);
+    }
+
+    .three {
+      background-image: url(../../static/3.png);
+    }
+
+    .four {
+      background-image: url(../../static/4.png);
+    }
+
+    .five {
+      background-image: url(../../static/5.png);
+    }
+
   }
+
   .one {
     margin-left: 191px;
   }
 }
 
-.displayNone{
+.displayNone {
   display: none;
 }

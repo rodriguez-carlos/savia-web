@@ -66,7 +66,7 @@ const About = () => {
         </div>
         <p className="title-2">Como elaboramos nuestas cervezas</p>
       </div>
-      {windowWidth > 820 ? <SwiperSlider /> : <BeerProcess />}
+      {windowWidth > 900 ? <SwiperSlider /> : <BeerProcess />}
       <Footer />
     </div>
   );
