@@ -2,12 +2,12 @@
 @import "../Components/components";
 
 .age-alert {
-    max-width: 896px;
+    width: 896px;
+    max-width: 90vw;
     height: 528px;
     min-height: 378px;
-    object-fit: fill;
     background-image: url(../../static/alert_fondo.png);
-    background-size: cover;
+    background-size: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -26,6 +26,7 @@
 
     .age-alert-subtitle {
         @include primary-font(3.6rem);
+        margin-bottom: 1rem;
     }
 
     .age-alert-buttons {
