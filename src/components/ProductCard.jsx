@@ -8,7 +8,7 @@ import neipaTest from "../static/neipaTest.jpeg";
 
 const ProductCard = ({product}) => {
     return (
-        <Card className="product-card">
+        <Card className="product-card" elevation={5}>
             <CardMedia 
                 component="img"
                 height="352"
@@ -18,7 +18,7 @@ const ProductCard = ({product}) => {
             />
             <CardContent align="left">
                 <Typography gutterBottom variant="h4" component="div" className="product-card-title">
-                    {product ? product.name : "Beer Name"}
+                    {product ? product.name : "Pack Beer Name"}
                 </Typography>
                 <Typography variant="h5" className="product-card-description">
                     {product ? product.description : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."}

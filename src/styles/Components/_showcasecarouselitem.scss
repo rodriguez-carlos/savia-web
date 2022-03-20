@@ -16,7 +16,9 @@
     }
     
     .showcase-carousel-item-text {
-        @include normal-font(3.9rem, 300);
+        @include normal-font(3.9rem, 500);
+        margin-top: 2rem;
+        line-height: 35.61px;
     }
     
     .showcase-carousel-item-left {
@@ -24,7 +26,7 @@
     }
     
     .showcase-carousel-item-right {
-        background-color: rgba(255, 255, 255, 0.85);
+        background-color: rgba(255, 255, 255, 0.9);
         width: 30.98%;
         height: 100%;
         position: absolute;
@@ -33,6 +35,7 @@
         
         .showcase-carousel-item-right-content {
             margin: 30% 15%;
+            //line-height: 35.16px;
             text-align: left;
             display: flex;
             flex-direction: column;
