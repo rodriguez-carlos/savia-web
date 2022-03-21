@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 import ProductCard from "../components/ProductCard";
@@ -6,8 +6,21 @@ import Button from "@mui/material/Button";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
-
 const BeersKinds = () => {
+  const [windowWidth, setwindowWidth] = useState(window.innerWidth);
+
+  const handleWidthScreenChange = () => {
+    setwindowWidth(window.innerWidth);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", handleWidthScreenChange);
+
+    return () => {
+      window.addEventListener("resize", handleWidthScreenChange);
+    };
+  });
+
   return (
     <>
       <Nav />
@@ -74,43 +87,79 @@ const BeersKinds = () => {
 
       <p className="title-2">Mira todos nuestro packs</p>
 
-      <Swiper
-        slidesPerView={5}
-        className="mySwiper"
-        breakpoints={{
-          900: {
-            width: 900,
-            slidesPerView: 2,
-          },
+      { windowWidth > 900 ?
+        <Swiper spaceBetween={30} slidesPerView={5} className="mySwiper">
+          <SwiperSlide>
+            <ProductCard />
+          </SwiperSlide>
+          <SwiperSlide>
+            <ProductCard />
+          </SwiperSlide>
+          <SwiperSlide>
+            <ProductCard />
+          </SwiperSlide>
+          <SwiperSlide>
+            <ProductCard />
+          </SwiperSlide>
+          <SwiperSlide>
+            <ProductCard />
+          </SwiperSlide>
+          <SwiperSlide>
+            <ProductCard />
+          </SwiperSlide>
+          <SwiperSlide>
+            <ProductCard />
+          </SwiperSlide>
+        </Swiper> 
+        : windowWidth > 550 ?
+        <Swiper slidesPerView={2}  className="mySwiper">
+          <SwiperSlide>
+            <ProductCard />
+          </SwiperSlide>
+          <SwiperSlide>
+            <ProductCard />
+          </SwiperSlide>
+          <SwiperSlide>
+            <ProductCard />
+          </SwiperSlide>
+          <SwiperSlide>
+            <ProductCard />
+          </SwiperSlide>
+          <SwiperSlide>
+            <ProductCard />
+          </SwiperSlide>
+          <SwiperSlide>
+            <ProductCard />
+          </SwiperSlide>
+          <SwiperSlide>
+            <ProductCard />
+          </SwiperSlide>
+        </Swiper> :
+        <Swiper slidesPerView={1}  className="mySwiper">
+          <SwiperSlide>
+            <ProductCard />
+          </SwiperSlide>
+          <SwiperSlide>
+            <ProductCard />
+          </SwiperSlide>
+          <SwiperSlide>
+            <ProductCard />
+          </SwiperSlide>
+          <SwiperSlide>
+            <ProductCard />
+          </SwiperSlide>
+          <SwiperSlide>
+            <ProductCard />
+          </SwiperSlide>
+          <SwiperSlide>
+            <ProductCard />
+          </SwiperSlide>
+          <SwiperSlide>
+            <ProductCard />
+          </SwiperSlide>
+        </Swiper>
+      }
 
-          550: {
-            width: 550,
-            slidesPerView: 1,
-          },
-        }}
-      >
-        <SwiperSlide>
-          <ProductCard />
-        </SwiperSlide>
-        <SwiperSlide>
-          <ProductCard />
-        </SwiperSlide>
-        <SwiperSlide>
-          <ProductCard />
-        </SwiperSlide>
-        <SwiperSlide>
-          <ProductCard />
-        </SwiperSlide>
-        <SwiperSlide>
-          <ProductCard />
-        </SwiperSlide>
-        <SwiperSlide>
-          <ProductCard />
-        </SwiperSlide>
-        <SwiperSlide>
-          <ProductCard />
-        </SwiperSlide>
-      </Swiper>
       <Footer />
     </>
   );
