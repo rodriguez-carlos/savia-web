@@ -38,6 +38,9 @@
       color: #37474f;
       margin: 0px 20px;
       cursor: pointer;
+      &:hover{
+        color: #246566;
+      }
       p {
         text-transform: lowercase;
       }
@@ -52,6 +55,9 @@
 .css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root {
   font-size: 2rem !important;
   font-weight: 500 !important;
+  &:hover{
+    color: #246566 !important;
+  }
   span {
     font-weight: 600 !important;
   }
