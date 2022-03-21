@@ -1,7 +1,7 @@
-import { BsInstagram } from 'react-icons/bs';
-import { BsWhatsapp } from 'react-icons/bs';
-import { AiOutlineMail } from 'react-icons/ai';
-
+import { BsInstagram } from "react-icons/bs";
+import { BsWhatsapp } from "react-icons/bs";
+import { AiOutlineMail } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -9,17 +9,31 @@ const Footer = () => {
       <div className="title-social-media">
         <h3>Seguimos en Contacto!</h3>
         <div className="social-media">
-          <div className="social-media-item"><BsInstagram/></div>
-          <div className="social-media-item"><AiOutlineMail/></div>
-          <div className="social-media-item"><BsWhatsapp/></div>
+          <a
+            href="https://www.instagram.com/saviacerveza/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <div className="social-media-item">
+              <BsInstagram />
+            </div>
+          </a>
+          <Link to="/contacto">
+            <div className="social-media-item">
+              <AiOutlineMail />
+            </div>
+          </Link>
+          <a href="" target="_blank" rel="noreferrer">
+            <div className="social-media-item">
+              <BsWhatsapp />
+            </div>
+          </a>
         </div>
       </div>
 
       <div className="terms-copyright">
         <p>BEBER CON MODERACIÓN. PROHIBIDA SU VENTA A MENORES DE 18 AÑOS</p>
-        <p>
-          Copyright ©Cerveza Savia 2022. Todos los derechos reservados
-        </p>
+        <p>Copyright ©Cerveza Savia 2022. Todos los derechos reservados</p>
       </div>
     </div>
   );
