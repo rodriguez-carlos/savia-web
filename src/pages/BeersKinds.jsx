@@ -5,10 +5,7 @@ import ProductCard from "../components/ProductCard";
 import Button from "@mui/material/Button";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-// Import Swiper styles
-import "swiper/scss";
-import "swiper/scss/navigation";
-import "swiper/scss/pagination";
+
 
 const BeersKinds = () => {
   return (
@@ -53,15 +50,21 @@ const BeersKinds = () => {
             lorem: Lorem ipsum dolor, sit amet consectetur adipisicing elit.
           </p>
 
-          <p className="precio"><span>Precio:</span></p>
+          <p className="precio">
+            <span>Precio:</span>
+          </p>
           <Button id="button" sx={{ borderRadius: 15, marginTop: 1 }}>
             Consultar
           </Button>
-          <p className="precio"><span>Precio:</span></p>
+          <p className="precio">
+            <span>Precio:</span>
+          </p>
           <Button id="button" sx={{ borderRadius: 15, marginTop: 1 }}>
             Consultar
           </Button>
-          <p className="precio"><span>Precio:</span></p>
+          <p className="precio">
+            <span>Precio:</span>
+          </p>
           <Button id="button" sx={{ borderRadius: 15, marginTop: 1 }}>
             Consultar
           </Button>
@@ -71,7 +74,21 @@ const BeersKinds = () => {
 
       <p className="title-2">Mira todos nuestro packs</p>
 
-      <Swiper slidesPerView={5} spaceBetween={33} className="mySwiper">
+      <Swiper
+        slidesPerView={5}
+        className="mySwiper"
+        breakpoints={{
+          900: {
+            width: 900,
+            slidesPerView: 2,
+          },
+
+          550: {
+            width: 550,
+            slidesPerView: 1,
+          },
+        }}
+      >
         <SwiperSlide>
           <ProductCard />
         </SwiperSlide>

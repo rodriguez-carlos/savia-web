@@ -21,7 +21,7 @@
             margin-bottom: 1rem;
         }
 
-        .packs-name{
+        .packs-name {
             @include normal-font(2rem, 500);
             margin-bottom: 1.6rem
         }
@@ -53,7 +53,7 @@
         .text-body-porcent {
             @include normal-font(1.8rem, 500);
             margin-top: 1.2rem;
-            
+
         }
 
         .precio {
@@ -94,6 +94,63 @@
     line-height: 79px;
 }
 
-.mySwiper{
+.mySwiper {
     margin: 6rem 0 15.4rem 16.8rem;
+}
+
+
+
+
+@media (max-width: 900px) {
+    .description-photo {
+        flex-direction: column-reverse;
+
+        .description {
+            width: 100%;
+            padding: 0 7.6rem 0 1.9rem;
+
+        }
+
+        .photo {
+            width: 100%;
+            height: 91.6rem;
+            background-color: grey;
+        }
+    }
+
+    .mySwiper {
+        margin-left: 1.7rem;
+        width: 900px;
+    }
+
+}
+
+
+@media (max-width: 550px) {
+    .description-photo {
+        margin-top: 0;
+        flex-direction: column-reverse;
+
+        .description {
+            width: 100%;
+            padding: 0 7.6rem 0 1.9rem;
+
+            .title {
+                @include primary-font(5rem, 700);
+            }
+
+        }
+
+        .photo {
+            width: 100%;
+            height: 91.6rem;
+            background-color: grey;
+        }
+    }
+
+    .mySwiper {
+        margin-left: 1.7rem;
+        width: 550px;
+    }
+
 }
