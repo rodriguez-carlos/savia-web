@@ -32,7 +32,6 @@
         position: absolute;
         margin-left: 69.02%;
         
-        
         .showcase-carousel-item-right-content {
             margin: 30% 15%;
             //line-height: 35.16px;
@@ -52,4 +51,56 @@
 .text-on-left {
     margin-left: 0 !important;
     margin-right: 69.02% !important;
+}
+
+@media (max-width: 950px) {
+    .showcase-carousel-item {
+        display: flex;
+        flex-direction: column;
+        height: 675px;
+    
+        .showcase-carousel-item-img {
+            width: 100%;
+            object-fit: cover;
+        }
+    
+        .showcase-carousel-item-title {
+            @include primary-font(3.7rem, 700);
+        }
+        
+        .showcase-carousel-item-text {
+            @include normal-font(1.8rem, 500);
+            margin-top: 2rem;
+            line-height: 21.09px;
+        }
+        
+        .showcase-carousel-item-left {
+            width: 100%;
+        }
+        
+        .showcase-carousel-item-right {
+            background-color: rgba(255, 255, 255, 0.9);
+            width: 100%;
+            height: 256px;
+            position: absolute;
+            margin: 62% 0 0 0;
+            bottom: 0;
+            
+            
+            .showcase-carousel-item-right-content {
+                margin: 10%;
+                //line-height: 35.16px;
+                text-align: left;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                
+                .showcase-carousel-item-right-content-button {
+                    @include button(#259193, white);
+                    margin-top: 10%;
+                    margin-bottom: 10%;
+                }
+            }
+        }
+    }
 }
