@@ -9,7 +9,7 @@ import { Dialog } from "@mui/material";
 import { useState } from "react";
 
 const Home = () => {
-  const[openAlert, setOpenAlert] = useState(true);
+  const[openAlert, setOpenAlert] = useState(false); //cambiar por true
 
   const handleClickCloseAlert = () => {
     setOpenAlert(false);
