@@ -7,13 +7,12 @@ import Typography from '@mui/material/Typography';
 
 const ProductCard = ({product}) => {
     return (
-        <Card className="product-card" elevation={5}>
+        <Card className="product-card" elevation={4}>
             <CardMedia 
                 component="img"
                 height="352"
                 image= {`http://localhost:1337${product.imagen_card.data.attributes.url}`}
                 alt={product.imagen_card.data.attributes.alternativeText}
-                sx={{borderRadius: "5px"}}
             />
             <CardContent align="left">
                 <Typography gutterBottom variant="h4" component="div" className="product-card-title">

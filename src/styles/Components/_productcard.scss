@@ -18,13 +18,14 @@
     .product-card-title {
         @include normal-font(2rem, 600);
         line-height: 2.4rem;
+        margin-bottom: 1rem;
     }
     .product-card-description {
         @include normal-font(1.6rem, 400);
-        line-height: 18.75px;
+        line-height: 1.8rem;
     }
     .product-card-button {
-        @include normal-font(1.6rem, 700);
+        @include normal-font(1.6rem, 600);
         color: #259193;
         line-height: 1.6rem;
         border: 0px;

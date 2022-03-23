@@ -5,15 +5,15 @@
     width: 77%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
 
     .product-cards-container-title{
-        text-align: left;
         @include primary-font(5.5rem, 500);
     }
 
     .product-cards-container-text{
-        text-align: left;
+        margin-top: 1rem;
         @include normal-font(3.6rem, 400);
     }
 
@@ -22,7 +22,9 @@
         width: 100%;
         display: flex;
         flex-direction: row;
+        justify-content: center;
         padding-bottom: 1rem;
+        padding-left: 0.2rem;
         // overflow-x: scroll;
         // overflow-y: hidden;
         // white-space: nowrap;

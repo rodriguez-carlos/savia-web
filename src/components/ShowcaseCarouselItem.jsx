@@ -9,12 +9,14 @@ const ShowcaseCarouselItem = ({slide, textOnLeft}) => {
                 alt=""
                 className="showcase-carousel-item-img"
             />
-            <Paper elevation={1} className=
-                {
-                    textOnLeft ? "showcase-carousel-item-right text-on-left" :
-                    "showcase-carousel-item-right"
+            <Paper
+                elevation={1}
+                className={textOnLeft 
+                    ? "showcase-carousel-item-right text-on-left"
+                    : "showcase-carousel-item-right"
                 }
-                >
+                sx={{ borderRadius: '0' }}
+            >
                 <div className="showcase-carousel-item-right-content">
                     <Typography variant="h2" className="showcase-carousel-item-title">
                         Nuestros Productos
