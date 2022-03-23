@@ -10,7 +10,7 @@ export const SwiperSlider = () => {
     <>
       <Swiper slidesPerView={2} spaceBetween={30} className= "mySwiper">
         <SwiperSlide className="slide-item one">
-          <div style={{ width: "27rem" }}>
+          <div style={{ flex: 1 }}>
             <p
               style={{
                 color: "#d15248",
@@ -51,7 +51,7 @@ export const SwiperSlider = () => {
                   padding: "0.5rem 0",
                 }}
               >
-                1°PASO
+                1° PASO
               </div>
               <div
                 style={{
@@ -68,7 +68,7 @@ export const SwiperSlider = () => {
           <div className="slide-item-img one"></div>
         </SwiperSlide>
         <SwiperSlide className="slide-item">
-          <div style={{ width: "40rem" }}>
+          <div style={{ flex: 1 }}>
             <p
               style={{
                 color: "#d15248",
@@ -112,7 +112,7 @@ export const SwiperSlider = () => {
                   padding: "0.5rem 0",
                 }}
               >
-                2°PASO
+                2° PASO
               </div>
               <div
                 style={{
@@ -129,7 +129,7 @@ export const SwiperSlider = () => {
           <div className="slide-item-img two"></div>
         </SwiperSlide>
         <SwiperSlide className="slide-item">
-          <div style={{ width: "38rem" }}>
+          <div style={{ flex: 1 }}>
             <p
               style={{
                 color: "#d15248",
@@ -173,7 +173,7 @@ export const SwiperSlider = () => {
                   padding: "0.5rem 0",
                 }}
               >
-                3°PASO
+                3° PASO
               </div>
               <div
                 style={{
@@ -190,7 +190,7 @@ export const SwiperSlider = () => {
           <div className="slide-item-img three"></div>
         </SwiperSlide>
         <SwiperSlide className="slide-item">
-          <div style={{ width: "40rem" }}>
+          <div style={{ flex: 1 }}>
             <p
               style={{
                 color: "#d15248",
@@ -234,7 +234,7 @@ export const SwiperSlider = () => {
                   padding: "0.5rem 0",
                 }}
               >
-                4°PASO
+                4° PASO
               </div>
               <div
                 style={{
@@ -251,7 +251,7 @@ export const SwiperSlider = () => {
           <div className="slide-item-img four"></div>
         </SwiperSlide>
         <SwiperSlide className="slide-item">
-          <div style={{ width: "25rem" }}>
+          <div style={{ flex: 1 }}>
             <p
               style={{
                 color: "#d15248",
@@ -293,7 +293,7 @@ export const SwiperSlider = () => {
                   padding: "0.5rem 0",
                 }}
               >
-                5°PASO
+                5° PASO
               </div>
               <div
                 style={{

@@ -10,12 +10,13 @@ form {
         @include normal-font(2.4rem, 500);
     }
     input, textarea {
-        background: #928E8E;
-        opacity: 0.25;
+        background: #928E8E25;
+        border-color: #928E8E25;
         border-radius: 20px;
         width: 100%;
         margin-top: 0.6rem;
         margin-bottom: 2.4rem;
+        padding: 1rem 2rem;
         height: 6.3rem;
         @include normal-font(2.4rem, 500);
     }
