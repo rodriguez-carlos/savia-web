@@ -3,11 +3,19 @@ import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 import ProductCard from "../components/ProductCard";
 import Button from "@mui/material/Button";
+import ProductCardsContainer from '../components/ProductCardsContainer';
+import { getAllVarieties, getVariety } from '../service/api.js';
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
 const BeersKinds = () => {
   const [windowWidth, setwindowWidth] = useState(window.innerWidth);
+
+  const [variety, setVariety] = useState();
+  const callVarietyApi = async () => {
+    const result = await getAllVarieties();
+    setVariety(result);
+  }
 
   const handleWidthScreenChange = () => {
     setwindowWidth(window.innerWidth);
@@ -87,7 +95,7 @@ const BeersKinds = () => {
 
       <p className="title-2">Mira todos nuestro packs</p>
 
-      { windowWidth > 900 ?
+      {/* { windowWidth > 900 ?
         <Swiper spaceBetween={30} slidesPerView={5} className="mySwiper">
           <SwiperSlide>
             <ProductCard />
@@ -158,7 +166,7 @@ const BeersKinds = () => {
             <ProductCard />
           </SwiperSlide>
         </Swiper>
-      }
+      } */}
 
       <Footer />
     </>
