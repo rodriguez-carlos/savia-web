@@ -10,17 +10,22 @@ import { useEffect, useState } from "react";
 import { getAllVarieties, getVariety } from "../service/api";
 
 const Home = () => {
-  const[openAlert, setOpenAlert] = useState(false); //cambiar por true
   const [varietiesData, setVarietiesData] = useState();
   const callVarietiesApi = async () => {
-    const result = await getVariety(1);
+    const result = await getAllVarieties();
     setVarietiesData(result);
+  }
+  const [carouselData, setCarouselData] = useState();
+  const callCarouselApi = async () => {
+    const result = await getAllVarieties();
+    setCarouselData(result);
   }
   useEffect(() => {
     callVarietiesApi();
+    callCarouselApi()
   }, [])
-  const beerName = varietiesData ? varietiesData.attributes.nombre_corto : '';
-  console.log(beerName);
+   
+  const[openAlert, setOpenAlert] = useState(false); //cambiar por true
   const handleClickCloseAlert = () => {
     setOpenAlert(false);
   }
@@ -32,7 +37,7 @@ const Home = () => {
         <AgeAlert handleClickCloseAlert={handleClickCloseAlert} />
       </Dialog>
       <ShowcaseCarousel />
-      <ProductCardsContainer products={varietiesData}/>
+      <ProductCardsContainer varieties={varietiesData}/>
       <ShowcaseCarouselItem textOnLeft />
       <Footer />
     </>

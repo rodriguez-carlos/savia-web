@@ -1,23 +1,30 @@
 const axios = require('axios').default;
 
 const StrapiClient = axios.create({
-    baseURL: 'http://localhost:1337/api'
+    baseURL: 'http://localhost:1337/api',
+    params: {
+        populate: '*'
+    }
 });
 
 async function getAllVarieties () {
     const response = await StrapiClient.get('/variedads');
-    console.log(response.data.data);
-    return response.data.data.data;
+    return response.data;
 }
 
 async function getVariety (id) {
     const response = await StrapiClient.get(`/variedads/${id}`);
-    console.log(response.data.data);
-    return response.data.data;
+    return response.data;
+}
+
+async function getCarouselSlides () {
+    const response = await StrapiClient.get('/carrusel-slides');
+    return response.data;
 }
 
 module.exports = {
     getAllVarieties,
-    getVariety
+    getVariety,
+    getCarouselSlides
 }
 

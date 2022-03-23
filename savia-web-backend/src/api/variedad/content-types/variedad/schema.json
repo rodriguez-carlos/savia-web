@@ -83,6 +83,10 @@
     "contenido_ibu": {
       "type": "string",
       "required": true
+    },
+    "stock": {
+      "type": "integer",
+      "required": true
     }
   }
 }
