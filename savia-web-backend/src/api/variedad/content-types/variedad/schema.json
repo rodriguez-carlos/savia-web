@@ -1,0 +1,88 @@
+{
+  "kind": "collectionType",
+  "collectionName": "variedads",
+  "info": {
+    "singularName": "variedad",
+    "pluralName": "variedads",
+    "displayName": "variedad",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre_corto": {
+      "type": "string",
+      "required": true
+    },
+    "nombre_largo": {
+      "type": "string",
+      "required": false
+    },
+    "precio_x6": {
+      "type": "biginteger",
+      "required": true,
+      "default": "8600"
+    },
+    "precio_x12": {
+      "type": "biginteger",
+      "required": true,
+      "default": "16600"
+    },
+    "precio_x24": {
+      "type": "biginteger",
+      "required": true,
+      "default": "32400"
+    },
+    "imagen_card": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "imagenes_carrusel": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "descripcion": {
+      "type": "text",
+      "required": true
+    },
+    "contenido_malta": {
+      "type": "string",
+      "required": true
+    },
+    "contenido_lupulos": {
+      "type": "string",
+      "required": true
+    },
+    "contenido_levadura": {
+      "type": "string",
+      "required": false
+    },
+    "contenido_otros": {
+      "type": "string",
+      "required": true
+    },
+    "contenido_por_unidad": {
+      "type": "string",
+      "default": "330 cc",
+      "required": true
+    },
+    "contenido_abv": {
+      "type": "string",
+      "unique": true
+    },
+    "contenido_ibu": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

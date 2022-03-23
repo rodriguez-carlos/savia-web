@@ -6,11 +6,21 @@ import ProductCardsContainer from "../components/ProductCardsContainer";
 import ShowcaseCarouselItem from "../components/ShowcaseCarouselItem";
 import AgeAlert from "../components/AgeAlert";
 import { Dialog } from "@mui/material";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { getAllVarieties, getVariety } from "../service/api";
 
 const Home = () => {
   const[openAlert, setOpenAlert] = useState(false); //cambiar por true
-
+  const [varietiesData, setVarietiesData] = useState();
+  const callVarietiesApi = async () => {
+    const result = await getVariety(1);
+    setVarietiesData(result);
+  }
+  useEffect(() => {
+    callVarietiesApi();
+  }, [])
+  const beerName = varietiesData ? varietiesData.attributes.nombre_corto : '';
+  console.log(beerName);
   const handleClickCloseAlert = () => {
     setOpenAlert(false);
   }
@@ -22,7 +32,7 @@ const Home = () => {
         <AgeAlert handleClickCloseAlert={handleClickCloseAlert} />
       </Dialog>
       <ShowcaseCarousel />
-      <ProductCardsContainer />
+      <ProductCardsContainer products={varietiesData}/>
       <ShowcaseCarouselItem textOnLeft />
       <Footer />
     </>

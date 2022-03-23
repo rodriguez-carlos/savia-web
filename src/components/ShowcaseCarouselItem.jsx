@@ -1,7 +1,7 @@
 import { Paper, Typography, Button } from "@mui/material";
 import image from "../static/atomo-slide-imagePlaceholder.png"
 
-const ShowcaseCarouselItem = ({textOnLeft}) => {
+const ShowcaseCarouselItem = ({slide, textOnLeft}) => {
     return (
         <Paper elevation={3} className="showcase-carousel-item">
             <img src={image}
