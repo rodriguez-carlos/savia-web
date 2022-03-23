@@ -3,15 +3,34 @@
 .mySwiper {
   .slide-item {
     display: flex;
-    padding: 47px 24px;
-    width: 72.8rem;
-    height: 248px;
-    left: 0px;
-    top: 0px;
+    flex-direction: column;
+    width: 73rem;
     margin: 6rem 1rem 6rem 0;
     margin-right: 1rem !important;
-    background: #ffffff;
-    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1);
+
+    .slide-item-card {
+      display: flex;
+      background: #ffffff;
+      box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1);
+      height: 25rem;
+      padding: 5rem 2.5rem;
+      overflow: auto;
+    }
+
+    .slide-item-content {
+      flex: 1;
+    }
+
+    .slide-item-title {
+      @include normal-font(3rem, 700);
+      color: #d15248;
+      line-height: 4rem;
+    }
+
+    .slide-item-text {
+      @include normal-font(2rem, 400);
+      line-height: 2.5rem;
+    }
 
     .slide-item-img {
       display: inline-block;
@@ -19,6 +38,29 @@
       height: 170px;
       background-size: cover;
       background-position: center;
+    }
+
+    .slide-item-decorator {
+      display: flex;
+      align-items: center;
+      margin-top: 2rem;
+    }
+
+    .slide-item-chip {
+      @include normal-font(1.6rem, 500);
+      width: 11rem;
+      height: 3rem;
+      background: #E9C969;
+      border-radius: 40px;
+      text-align: center;
+      padding: 0.5rem 0;
+      margin-right: 2rem;
+    }
+
+    .slide-item-chip-separator {
+      flex: 1;
+      height: 0px;
+      border: 1px solid #252424;
     }
 
     .one {
@@ -43,8 +85,8 @@
 
   }
 
-  .one {
-    margin-left: 191px;
+  .slide-item.one {
+    margin-left: 19rem;
   }
 }
 
