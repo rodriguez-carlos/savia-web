@@ -5,7 +5,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 16.4rem;
+  padding-left: min(16.9rem, 10%);
+  padding-right: min(16.9rem, 10%);
   position: sticky;
   top: 0;
   z-index: 3;
@@ -28,7 +29,7 @@
   .list-item {
     #basic-button {
       font-family: Jost;
-      font-size: 2rem;
+      font-size: 1.8rem;
       text-transform: capitalize;
       font-style: normal;
       font-weight: 600;
@@ -53,7 +54,7 @@
 }
 
 .css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root {
-  font-size: 2rem !important;
+  font-size: 1.8rem !important;
   font-weight: 500 !important;
   &:hover{
     color: #246566 !important;

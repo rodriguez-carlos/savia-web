@@ -4,6 +4,7 @@
 .product-card {
     width: 251px;
     height: 572px;
+    margin-right: 3.3rem;
 
     .product-card-title {
         @include normal-font(2rem, 600);
