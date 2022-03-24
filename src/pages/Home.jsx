@@ -50,9 +50,12 @@ const Home = () => {
         <AgeAlert handleClickCloseAlert={handleClickCloseAlert} />
       </Dialog>
       <ShowcaseCarousel>
-        {carouselData ? carouselData.map((slide) => {
-          return <ShowcaseCarouselItem slide={slide} key={slide.id} />
-        }) : ''}
+        {carouselData
+          ? carouselData.map((slide) => (
+              <ShowcaseCarouselItem slide={slide} key={slide.id} />
+            ))
+          : ''
+        }
       </ShowcaseCarousel>
       <ProductCardsContainer staticInfo={staticInfo} varieties={varietiesData}/>
       <ShowcaseCarouselItem slide={bottomImage} textOnLeft />
