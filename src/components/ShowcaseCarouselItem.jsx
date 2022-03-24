@@ -1,5 +1,5 @@
 import { Paper, Typography, Button } from "@mui/material";
-import image from "../static/atomo-slide-imagePlaceholder.png"
+import { Link } from 'react-router-dom';
 
 const ShowcaseCarouselItem = ({slide, textOnLeft}) => {
     if(!slide) return '';
@@ -25,9 +25,11 @@ const ShowcaseCarouselItem = ({slide, textOnLeft}) => {
                     <Typography variant="h5" className="showcase-carousel-item-text">
                         {slide.attributes.descripcion}
                     </Typography>
-                    <Button className="showcase-carousel-item-right-content-button">
-                        Ver Más
-                    </Button>
+                    <Link to={slide.attributes.ruta_link} style={{textDecoration: "none"}}>
+                        <Button className="showcase-carousel-item-right-content-button">
+                            Ver Más
+                        </Button>
+                    </Link>
                 </div>
             </Paper>
         </Paper>
