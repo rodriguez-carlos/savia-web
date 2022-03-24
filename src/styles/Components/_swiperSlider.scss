@@ -1,18 +1,19 @@
 @import "../base/typography";
 
 .mySwiper {
+  padding-right: 10rem;
   .slide-item {
     display: flex;
     flex-direction: column;
     width: 73rem;
-    margin: 6rem 1rem 6rem 0;
+    margin: 6rem 3rem 6rem 0;
     margin-right: 1rem !important;
 
     .slide-item-card {
       display: flex;
       background: #ffffff;
       box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1);
-      height: 28rem;
+      height: 29rem;
       padding: 5rem 2.5rem;
       overflow: auto;
     }
