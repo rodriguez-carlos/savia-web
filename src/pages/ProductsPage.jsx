@@ -5,7 +5,7 @@ import ShowcaseCarousel from '../components/ShowcaseCarousel';
 import ShowcaseCarouselItem from '../components/ShowcaseCarouselItem';
 import ProductCardsContainer from '../components/ProductCardsContainer';
 import '../styles/pages/_productsPage.scss';
-import { getProductCarouselSlides } from "../service/api";
+import { getProductCarouselSlides, getAllVarieties } from "../service/api";
 
 const ProductsPage = () => {
     const productsStaticInfo = {
@@ -24,8 +24,15 @@ const ProductsPage = () => {
         setCarouselData(result.data);
     }
 
+    const [varietiesData, setVarietiesData] = useState();
+    const callVarietiesApi = async () => {
+        const result = await getAllVarieties();
+        setVarietiesData(result.data);
+    }
+
     useEffect(() => {
         callCarouselApi();
+        callVarietiesApi();
     }, [])
 
     return (
@@ -42,6 +49,7 @@ const ProductsPage = () => {
                     <ProductCardsContainer
                         className="left-align"
                         staticInfo={productsStaticInfo}
+                        varieties={varietiesData}
                     />
                 </div>
 
@@ -50,6 +58,8 @@ const ProductsPage = () => {
                     <ProductCardsContainer
                         className="left-align"
                         staticInfo={kegsStaticInfo}
+                        varieties={varietiesData}
+                        barrel
                     />
                 </div>
 
