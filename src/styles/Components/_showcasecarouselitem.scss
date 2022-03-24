@@ -16,9 +16,10 @@
     }
     
     .showcase-carousel-item-text {
-        @include normal-font(3.9rem, 500);
+        @include normal-font(3rem, 500);
         margin-top: 2rem;
-        line-height: 35.61px;
+        margin-right: 1rem;
+        line-height: 3.5rem;
     }
     
     .showcase-carousel-item-left {

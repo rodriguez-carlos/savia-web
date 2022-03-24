@@ -4,25 +4,72 @@
 .product-card {
     width: 251px;
     height: 572px;
+    margin-right: 1.6rem;
+    margin-left: 1.6rem;
+    display: flex;
+    flex-direction: column;
+
+    .MuiCardContent-root {
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        flex: 1;
+    }
 
     .product-card-title {
         @include normal-font(2rem, 600);
         line-height: 2.4rem;
+        margin-bottom: 1rem;
     }
     .product-card-description {
         @include normal-font(1.6rem, 400);
-        line-height: 18.75px;
+        line-height: 1.8rem;
     }
     .product-card-button {
-        @include normal-font(1.6rem, 700);
+        @include normal-font(1.6rem, 600);
         color: #259193;
         line-height: 1.6rem;
         border: 0px;
-        margin: 4.8rem 0 2.5rem 0;
+        margin: auto 0 0;
         padding: 0;
 
         &:hover {
             color: #246566;
+        }
+    }
+}
+
+@media (max-width: 950px) {
+    .product-card {
+        width: 282px;
+        height: 456px;
+        margin-right: 0.8rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .product-card-title {
+            @include normal-font(2rem, 600);
+            line-height: 2.4rem;
+            
+        }
+
+        .product-card-description {
+            display: none;
+        }
+
+        .product-card-button {
+            @include normal-font(1.6rem, 700);
+            color: #259193;
+            text-align: center;
+            line-height: 1.6rem;
+            border: 0px;
+            margin: 3.2rem 0 3.1rem 0;
+            padding: 0;
+    
+            &:hover {
+                color: #246566;
+            }
         }
     }
 }

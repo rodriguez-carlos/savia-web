@@ -79,7 +79,7 @@ const Nav = () => {
                   Barriles
                 </MenuItem>
                 <MenuItem onClick={handleClose} id="menu-item">
-                  Keezer
+                  Schopera
                 </MenuItem>
               </Menu>
             </li>

@@ -61,13 +61,12 @@
             @include normal-font(1.8rem, 500);
 
             span {
-                @include normal-font(1.8rem, 700);
-
+                @include normal-font(1.8rem, 400);
             }
         }
 
         #button {
-            width: 28.2rem;
+            width: 29rem;
             height: 4.8rem;
             background: #259193;
             border: 1px solid #259193;
@@ -80,8 +79,12 @@
 
     .photo {
         width: 50%;
+        max-width: 773px;
         height: 91.6rem;
-        background-color: grey;
+
+        img {
+            height: 91.6rem;
+        }
     }
 }
 
@@ -95,7 +98,17 @@
 }
 
 .mySwiper {
-    margin: 6rem 0 15.4rem 16.8rem;
+    margin: 6rem 0 6rem 16.8rem;
+}
+
+.product-cards-container-grid {
+    margin-top: 6.7rem;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 1rem;
+    padding-left: 0.2rem;
+    margin: 11.1rem auto;
+    width: 77%;
 }
 
 
