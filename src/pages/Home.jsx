@@ -25,8 +25,9 @@ const Home = () => {
     callCarouselApi()
   }, [])
    
-  const[openAlert, setOpenAlert] = useState(false); //cambiar por true
+  const[openAlert, setOpenAlert] = useState(!localStorage.getItem("isOfAge"));
   const handleClickCloseAlert = () => {
+    localStorage.setItem("isOfAge", true);
     setOpenAlert(false);
   }
 
