@@ -7,7 +7,7 @@ import ShowcaseCarouselItem from "../components/ShowcaseCarouselItem";
 import AgeAlert from "../components/AgeAlert";
 import { Dialog } from "@mui/material";
 import { useEffect, useState } from "react";
-import { getAllVarieties, getVariety, getCarouselSlides } from "../service/api";
+import { getAllVarieties, getCarouselSlides } from "../service/api";
 
 const Home = () => {
   const [varietiesData, setVarietiesData] = useState();

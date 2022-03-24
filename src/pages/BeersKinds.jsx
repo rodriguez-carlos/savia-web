@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 import Button from "@mui/material/Button";
-import ProductCardsContainer from '../components/ProductCardsContainer';
+import ProductCard from '../components/ProductCard';
+import ScrollContainer from "react-indiana-drag-scroll";
 import { getAllVarieties, getVariety } from '../service/api.js';
 
 import { useParams } from "react-router-dom";
@@ -11,19 +12,26 @@ import ShowcaseCarousel from "../components/ShowcaseCarousel";
 const BeersKinds = () => {
   const { paramId } = useParams();
   const [variety, setVariety] = useState();
+  const [varieties, setVarieties] = useState();
   var formatter = new Intl.NumberFormat('es-CL', {
     style: 'currency',
-
     currency: 'CLP',
   });
   
-  const callVarietyApi = async () => {
-    const result = await getVariety(paramId);
-    setVariety(result.data);
-  }
   useEffect(() => {
+    const callVarietyApi = async () => {
+      const result = await getVariety(paramId);
+      setVariety(result.data);
+    }
+    const callVarietiesApi = async () => {
+      const result = await getAllVarieties();
+      const neededResult = result.data.filter(variety => variety.id != paramId);
+      console.log(neededResult);
+      setVarieties(neededResult);
+    }
     callVarietyApi();
-  }, []);
+    callVarietiesApi();
+  }, [paramId]);
 
 
   return (
@@ -94,15 +102,26 @@ const BeersKinds = () => {
           {variety ? 
             <ShowcaseCarousel>
               {variety.attributes.imagenes_carrusel.data.map((imagen) => {
-                return <img src={`http://localhost:1337${imagen.attributes.url}`} alt="" />
+                return <img key={imagen.id} src={`http://localhost:1337${imagen.attributes.url}`} 
+                alt={imagen.attributes.alternativeText}/>
               })}
             </ ShowcaseCarousel>
           : ''}
         </div>
       </div>
 
-      <p className="title-2">Mira todos nuestro packs</p>
-
+      <p className="title-2">Mira todos nuestros packs</p>
+      <ScrollContainer className="product-cards-container-grid" >
+        {varieties ?
+          varieties.map((variety) => {
+              return (
+                  <div className="product-cards-container-card" key={variety.id}>
+                      <ProductCard product={variety.attributes} id={variety.id}/> 
+                  </div>
+              )
+          })
+        : ''}
+      </ScrollContainer>
       <Footer />
     </>
   );
