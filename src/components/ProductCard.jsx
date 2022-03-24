@@ -22,7 +22,11 @@ const ProductCard = ({product, id}) => {
                 <Typography variant="h5" className="product-card-description">
                     {product ? product.descripcion : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."}
                 </Typography>
-                <Link className="product-card-button" to={`/variedades/${id}`} style={{ textDecoration: "none" }}>
+                <Link
+                    className="product-card-button"
+                    to={`/variedades/${id}`}
+                    style={{ textDecoration: "none" }}
+                >
                     <Button variant="text" className="product-card-button"
                     sx={{borderRadius: 15, marginTop: 1}}>
                         {product ? (product.stock > 5 ? "Ver Más": "Agotado") : "Ver Más"}

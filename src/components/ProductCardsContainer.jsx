@@ -3,9 +3,9 @@ import { Typography } from "@mui/material";
 import ScrollContainer from "react-indiana-drag-scroll";
 import ProductCard from "./ProductCard";
 
-const ProductCardsContainer = ({staticInfo, varieties}) => {
+const ProductCardsContainer = ({staticInfo, varieties, className = ''}) => {
     return (
-        <div className="product-cards-container">
+        <div className={`product-cards-container ${className}`}>
             <Typography variant="h1" className="product-cards-container-title">
                 {staticInfo.title}
             </Typography>
