@@ -4,7 +4,8 @@
   "info": {
     "singularName": "carrusel-slide",
     "pluralName": "carrusel-slides",
-    "displayName": "carrusel-slide"
+    "displayName": "carrusel-slide",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -20,12 +21,12 @@
       "required": true
     },
     "imagen": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
       "multiple": false,
-      "private": true
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
     },
     "ruta_link": {
       "type": "string",

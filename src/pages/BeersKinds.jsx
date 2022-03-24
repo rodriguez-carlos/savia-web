@@ -1,62 +1,56 @@
 import React, { useEffect, useState } from "react";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
-import ProductCard from "../components/ProductCard";
 import Button from "@mui/material/Button";
 import ProductCardsContainer from '../components/ProductCardsContainer';
 import { getAllVarieties, getVariety } from '../service/api.js';
 
-import { Swiper, SwiperSlide } from "swiper/react";
+import { useParams } from "react-router-dom";
+import ShowcaseCarousel from "../components/ShowcaseCarousel";
 
 const BeersKinds = () => {
-  const [windowWidth, setwindowWidth] = useState(window.innerWidth);
-
+  const { paramId } = useParams();
   const [variety, setVariety] = useState();
-  const callVarietyApi = async () => {
-    const result = await getAllVarieties();
-    setVariety(result);
-  }
+  var formatter = new Intl.NumberFormat('es-CL', {
+    style: 'currency',
 
-  const handleWidthScreenChange = () => {
-    setwindowWidth(window.innerWidth);
-  };
-
-  useEffect(() => {
-    window.addEventListener("resize", handleWidthScreenChange);
-
-    return () => {
-      window.addEventListener("resize", handleWidthScreenChange);
-    };
+    currency: 'CLP',
   });
+  
+  const callVarietyApi = async () => {
+    const result = await getVariety(paramId);
+    setVariety(result.data);
+  }
+  useEffect(() => {
+    callVarietyApi();
+  }, []);
+
 
   return (
     <>
       <Nav />
       <div className="description-photo">
         <div className="description">
-          <h1 className="title">Lorem ipsum dolor</h1>
-          <p className="subtitle">Lorem ipsum dolor</p>
+          <h1 className="title">{variety ? variety.attributes.nombre_corto : ''}</h1>
+          <p className="subtitle">{variety ? variety.attributes.nombre_largo : ''}</p>
 
-          <p className="packs-name">Loerm</p>
+          <p className="packs-name">Pack Botella de Vidrio</p>
           <p className="text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
-            fuga libero sequi impedit dignissimos possimus dolore tenetur
-            reiciendis accusantium quia. Blanditiis quisquam officiis soluta
-            deserunt quo odio facilis nostrum odit.
+            {variety ? variety.attributes.descripcion : ''}
           </p>
 
           <p className="subtitle-three">Ingredientes:</p>
           <p className="text-body">
-            <span>lorem:</span> Lorem ipsum dolor, sit amet consectetur
-            adipisicing elit.
+            <span>Malta:</span> {variety ? variety.attributes.contenido_malta : ''}
           </p>
           <p className="text-body">
-            <span>lorem:</span> Lorem ipsum dolor, sit amet consectetur
-            adipisicing elit.
+            <span>Lúpulos:</span> {variety ? variety.attributes.contenido_lupulos : ''}
           </p>
           <p className="text-body">
-            <span>lorem:</span> Lorem ipsum dolor, sit amet consectetur
-            adipisicing elit.
+            <span>Levadura:</span> {variety ? variety.attributes.contenido_levadura : ''}
+          </p>
+          <p className="text-body">
+            <span>Otros:</span> {variety ? variety.attributes.contenido_otros : ''}
           </p>
 
           <hr />
@@ -72,101 +66,42 @@ const BeersKinds = () => {
           </p>
 
           <p className="precio">
-            <span>Precio:</span>
+            <span><strong>Precio: </strong>
+              {variety ? formatter.format(variety.attributes.precio_x6) : ''} CLP
+            </span>
           </p>
           <Button id="button" sx={{ borderRadius: 15, marginTop: 1 }}>
-            Consultar
+            comprar pack x6
           </Button>
           <p className="precio">
-            <span>Precio:</span>
+            <span><strong>Precio: </strong>
+              {variety ? formatter.format(variety.attributes.precio_x12) : ''} CLP
+            </span>
           </p>
           <Button id="button" sx={{ borderRadius: 15, marginTop: 1 }}>
-            Consultar
+            comprar pack x12
           </Button>
           <p className="precio">
-            <span>Precio:</span>
+            <span><strong>Precio: </strong>
+              {variety ? formatter.format(variety.attributes.precio_x24) : ''} CLP
+            </span>
           </p>
           <Button id="button" sx={{ borderRadius: 15, marginTop: 1 }}>
-            Consultar
+            comprar pack x24
           </Button>
         </div>
-        <div className="photo"></div>
+        <div className="photo">
+          {variety ? 
+            <ShowcaseCarousel>
+              {variety.attributes.imagenes_carrusel.data.map((imagen) => {
+                return <img src={`http://localhost:1337${imagen.attributes.url}`} alt="" />
+              })}
+            </ ShowcaseCarousel>
+          : ''}
+        </div>
       </div>
 
       <p className="title-2">Mira todos nuestro packs</p>
-
-      {/* { windowWidth > 900 ?
-        <Swiper spaceBetween={30} slidesPerView={5} className="mySwiper">
-          <SwiperSlide>
-            <ProductCard />
-          </SwiperSlide>
-          <SwiperSlide>
-            <ProductCard />
-          </SwiperSlide>
-          <SwiperSlide>
-            <ProductCard />
-          </SwiperSlide>
-          <SwiperSlide>
-            <ProductCard />
-          </SwiperSlide>
-          <SwiperSlide>
-            <ProductCard />
-          </SwiperSlide>
-          <SwiperSlide>
-            <ProductCard />
-          </SwiperSlide>
-          <SwiperSlide>
-            <ProductCard />
-          </SwiperSlide>
-        </Swiper> 
-        : windowWidth > 550 ?
-        <Swiper slidesPerView={2}  className="mySwiper">
-          <SwiperSlide>
-            <ProductCard />
-          </SwiperSlide>
-          <SwiperSlide>
-            <ProductCard />
-          </SwiperSlide>
-          <SwiperSlide>
-            <ProductCard />
-          </SwiperSlide>
-          <SwiperSlide>
-            <ProductCard />
-          </SwiperSlide>
-          <SwiperSlide>
-            <ProductCard />
-          </SwiperSlide>
-          <SwiperSlide>
-            <ProductCard />
-          </SwiperSlide>
-          <SwiperSlide>
-            <ProductCard />
-          </SwiperSlide>
-        </Swiper> :
-        <Swiper slidesPerView={1}  className="mySwiper">
-          <SwiperSlide>
-            <ProductCard />
-          </SwiperSlide>
-          <SwiperSlide>
-            <ProductCard />
-          </SwiperSlide>
-          <SwiperSlide>
-            <ProductCard />
-          </SwiperSlide>
-          <SwiperSlide>
-            <ProductCard />
-          </SwiperSlide>
-          <SwiperSlide>
-            <ProductCard />
-          </SwiperSlide>
-          <SwiperSlide>
-            <ProductCard />
-          </SwiperSlide>
-          <SwiperSlide>
-            <ProductCard />
-          </SwiperSlide>
-        </Swiper>
-      } */}
 
       <Footer />
     </>

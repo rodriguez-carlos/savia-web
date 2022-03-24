@@ -4,7 +4,6 @@ import ScrollContainer from "react-indiana-drag-scroll";
 import ProductCard from "./ProductCard";
 
 const ProductCardsContainer = ({varieties}) => {
-    console.log(varieties);
     return (
         <div className="product-cards-container">
             <Typography variant="h1" className="product-cards-container-title">
@@ -16,10 +15,10 @@ const ProductCardsContainer = ({varieties}) => {
             </Typography>
             <ScrollContainer className="product-cards-container-grid" >
             {varieties
-                ? varieties.data.map((variety) => {
+                ? varieties.map((variety) => {
                     return (
                         <div className="product-cards-container-card" key={variety.id}>
-                            <ProductCard product={variety.attributes}/> 
+                            <ProductCard product={variety.attributes} id={variety.id}/> 
                         </div>
                     )
                 })

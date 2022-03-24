@@ -12,7 +12,7 @@ function Rutas() {
       <Route path="/nosotros" element={<About />} exact />
       <Route path="/envios" element={<Shimpments />} exact />
       <Route path="/contacto" element={<Contact />} exact />
-      <Route path="/variedades" element={<BeersKinds  />} exact />
+      <Route path="/variedades/:paramId" element={<BeersKinds  />} exact/>
     </Routes>
   );
 }

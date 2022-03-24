@@ -3,7 +3,7 @@ import ShowcaseCarouselItem from './ShowcaseCarouselItem';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 
-const ShowcaseCarousel = ({slides}) => {
+const ShowcaseCarousel = ({children}) => {
     return (
         <Carousel
             NextIcon={<ArrowForwardIosIcon />}
@@ -39,9 +39,7 @@ const ShowcaseCarousel = ({slides}) => {
                 }
             }}
         >
-            <ShowcaseCarouselItem />
-            <ShowcaseCarouselItem />
-            <ShowcaseCarouselItem />
+            {children}
         </Carousel>
     )
 }

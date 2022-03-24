@@ -3,9 +3,10 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import { Link } from 'react-router-dom';
 
 
-const ProductCard = ({product}) => {
+const ProductCard = ({product, id}) => {
     return (
         <Card className="product-card" elevation={4}>
             <CardMedia 
@@ -21,10 +22,12 @@ const ProductCard = ({product}) => {
                 <Typography variant="h5" className="product-card-description">
                     {product ? product.descripcion : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."}
                 </Typography>
-                <Button variant="text" className="product-card-button"
-                sx={{borderRadius: 15, marginTop: 1}}>
-                    {product ? (product.stock > 5 ? "Ver Más": "Agotado") : "Ver Más"}
-                </Button>
+                <Link className="product-card-button" to={`/variedades/${id}`} style={{ textDecoration: "none" }}>
+                    <Button variant="text" className="product-card-button"
+                    sx={{borderRadius: 15, marginTop: 1}}>
+                        {product ? (product.stock > 5 ? "Ver Más": "Agotado") : "Ver Más"}
+                    </Button>
+                </Link>
             </CardContent>
         </Card>
     )

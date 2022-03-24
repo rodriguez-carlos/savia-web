@@ -13,12 +13,12 @@ const Home = () => {
   const [varietiesData, setVarietiesData] = useState();
   const callVarietiesApi = async () => {
     const result = await getAllVarieties();
-    setVarietiesData(result);
+    setVarietiesData(result.data);
   }
   const [carouselData, setCarouselData] = useState();
   const callCarouselApi = async () => {
     const result = await getCarouselSlides();
-    setCarouselData(result);
+    setCarouselData(result.data);
   }
   useEffect(() => {
     callVarietiesApi();
@@ -33,10 +33,14 @@ const Home = () => {
   return (
     <>
       <Nav />
-      <Dialog className="age-alert-dialog" open={openAlert} maxWidth={896} >
+      <Dialog className="age-alert-dialog" open={openAlert} maxWidth="896px" >
         <AgeAlert handleClickCloseAlert={handleClickCloseAlert} />
       </Dialog>
-      <ShowcaseCarousel />
+      <ShowcaseCarousel>
+        {carouselData ? carouselData.map((slide) => {
+          return <ShowcaseCarouselItem slide={slide} key={slide.id} />
+        }) : ''}
+      </ShowcaseCarousel>
       <ProductCardsContainer varieties={varietiesData}/>
       <ShowcaseCarouselItem textOnLeft />
       <Footer />

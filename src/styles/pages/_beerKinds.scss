@@ -61,13 +61,12 @@
             @include normal-font(1.8rem, 500);
 
             span {
-                @include normal-font(1.8rem, 700);
-
+                @include normal-font(1.8rem, 400);
             }
         }
 
         #button {
-            width: 28.2rem;
+            width: 29rem;
             height: 4.8rem;
             background: #259193;
             border: 1px solid #259193;
@@ -81,7 +80,10 @@
     .photo {
         width: 50%;
         height: 91.6rem;
-        background-color: grey;
+
+        img {
+            height: 91.6rem;
+        }
     }
 }
 
