@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "carrusel_productos_slides",
+  "info": {
+    "singularName": "carrusel-productos-slide",
+    "pluralName": "carrusel-productos-slides",
+    "displayName": "Carrusel Productos slide",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "titulo": {
+      "type": "string"
+    },
+    "descripcion": {
+      "type": "text"
+    },
+    "ruta_link": {
+      "type": "string"
+    },
+    "imagen": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

@@ -1,17 +1,16 @@
 import "../styles/Components/_productcardscontainer.scss";
-import { Grid, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 import ScrollContainer from "react-indiana-drag-scroll";
 import ProductCard from "./ProductCard";
 
-const ProductCardsContainer = ({varieties}) => {
+const ProductCardsContainer = ({staticInfo, varieties}) => {
     return (
         <div className="product-cards-container">
             <Typography variant="h1" className="product-cards-container-title">
-                Nuestras Cervezas
+                {staticInfo.title}
             </Typography>
-            <Typography variant="h5" className="product-cards-container-text">
-                Savia es cerveza 100% artesanal y chilena <br />
-                Te presentamos nuestras variedades, no dejes de probarlas todas!
+            <Typography variant="h5" >
+                <pre className="product-cards-container-text">{staticInfo.description}</pre>
             </Typography>
             <ScrollContainer className="product-cards-container-grid" >
             {varieties

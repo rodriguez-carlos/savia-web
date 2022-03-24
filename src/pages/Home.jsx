@@ -10,6 +10,18 @@ import { useEffect, useState } from "react";
 import { getAllVarieties, getCarouselSlides } from "../service/api";
 
 const Home = () => {
+  const staticInfo = {
+    title: "Nuestras Cervezas",
+    description: "Savia es cerveza 100% artesanal y chilena. \n Presentamos nuestras variedades, no dejes de probarlas todas!"
+  }
+  const bottomImage = {
+    attributes: {
+      titulo: "Nuestra Filosofía", 
+      descripcion: "Somos una empresa independiente y consciente del medio ambiente. Conoce más sobre Savia!",
+      imagen: { data: { attributes: { url: "/uploads/nuestra_filosofia_home_1a31e03e65.jpg" } } },
+      ruta_link: '/nosotros'
+    }
+  }
   const [varietiesData, setVarietiesData] = useState();
   const callVarietiesApi = async () => {
     const result = await getAllVarieties();
@@ -42,8 +54,8 @@ const Home = () => {
           return <ShowcaseCarouselItem slide={slide} key={slide.id} />
         }) : ''}
       </ShowcaseCarousel>
-      <ProductCardsContainer varieties={varietiesData}/>
-      <ShowcaseCarouselItem textOnLeft />
+      <ProductCardsContainer staticInfo={staticInfo} varieties={varietiesData}/>
+      <ShowcaseCarouselItem slide={bottomImage} textOnLeft />
       <Footer />
     </>
   );

@@ -70,7 +70,7 @@ const Nav = () => {
                 onClose={handleClose}
               >
                 <MenuItem onClick={handleClose} className="menu-item">
-                  <Link to="">
+                  <Link to="productos">
                     Ver todo
                   </Link>
                 </MenuItem>
