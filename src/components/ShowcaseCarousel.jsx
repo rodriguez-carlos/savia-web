@@ -39,7 +39,7 @@ const ShowcaseCarousel = ({children}) => {
                 }
             }}
         >
-            {children ? children : <div style={{ height: 749}} />}
+            {children}
         </Carousel>
     )
 }

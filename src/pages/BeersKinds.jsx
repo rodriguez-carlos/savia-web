@@ -72,13 +72,16 @@ const BeersKinds = () => {
           <hr />
 
           <p className="text-body-porcent">
-            lorem: Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            <span>{variety ? variety.attributes.contenido_abv : ''}</span>
+            &nbsp;ABV (graduación Alcohólica)
           </p>
           <p className="text-body-porcent">
-            lorem: Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            <span>{variety ? variety.attributes.contenido_ibu : ''}</span>
+            &nbsp;IBU (amargor)
           </p>
           <p className="text-body-porcent">
-            lorem: Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            <span>{variety ? variety.attributes.contenido_por_unidad : ''}</span>
+            &nbsp;Contenido por unidad
           </p>
 
           <p className="precio">

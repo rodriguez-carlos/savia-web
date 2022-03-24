@@ -28,6 +28,7 @@
 
         .text {
             @include normal-font(2rem, 400);
+            line-height: 2.8rem;
             margin-bottom: 1.5rem
         }
 
@@ -38,9 +39,9 @@
 
         .text-body {
             @include normal-font(2.1rem, 400);
+            line-height: 3rem;
 
             span {
-
                 @include normal-font(2.1rem, 700);
             }
         }
@@ -53,7 +54,13 @@
         .text-body-porcent {
             @include normal-font(1.8rem, 500);
             margin-top: 1.2rem;
+            letter-spacing: 1.25px;
 
+            span {
+                @include normal-font(1.8rem, 700);
+                width: 10rem;
+                display: inline-block;
+            }
         }
 
         .precio {
