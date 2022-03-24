@@ -3,7 +3,7 @@ import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import logo from "../static/sabia-10x10-03.png";
-import { Link } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
 import { GrMenu } from "react-icons/gr";
 import { AiOutlineDown } from "react-icons/ai";
 
@@ -75,17 +75,17 @@ const Nav = () => {
                   </Link>
                 </MenuItem>
                 <MenuItem onClick={handleClose} className="menu-item">
-                  <Link to="">
+                  <Link to="/productos#packs">
                     Packs de cerveza
                   </Link>
                 </MenuItem>
                 <MenuItem onClick={handleClose} className="menu-item">
-                  <Link to="">
+                  <Link to="/productos#barriles">
                     Barriles
                   </Link>
                 </MenuItem>
                 <MenuItem onClick={handleClose} className="menu-item">
-                  <Link to="">
+                  <Link to="/productos#shopera">
                     Schopera
                   </Link>
                 </MenuItem>
