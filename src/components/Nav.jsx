@@ -41,26 +41,26 @@ const Nav = () => {
         <ul>
           <Link to="/" style={{ textDecoration: "none" }}>
             <li className="list-item">
-              <Button id="basic-button">Inicio</Button>
+              <Button className="basic-button">Inicio</Button>
             </li>
           </Link>
 
           <Link to="/nosotros" style={{ textDecoration: "none" }}>
             <li className="list-item">
-              <Button id="basic-button">Sobre Nosotros</Button>
+              <Button className="basic-button">Sobre Nosotros</Button>
             </li>
           </Link>
 
-          <Link to="" style={{ textDecoration: "none" }}>
+          <div to="">
             <li className="list-item">
               <Button
-                id="basic-button"
+                className="basic-button"
                 aria-controls={open ? "basic-menu" : undefined}
                 aria-haspopup="true"
                 aria-expanded={open ? "true" : undefined}
                 onClick={handleClick}
               >
-                Productos &nbsp;<p>y</p>&nbsp; Servicios &nbsp;
+                Productos &nbsp;<span>y</span>&nbsp; Servicios &nbsp;
                 <AiOutlineDown />
               </Button>
               <Menu
@@ -69,31 +69,39 @@ const Nav = () => {
                 open={open}
                 onClose={handleClose}
               >
-                <MenuItem onClick={handleClose} id="menu-item">
-                  <span>Ver todo</span>
+                <MenuItem onClick={handleClose} className="menu-item">
+                  <Link to="">
+                    Ver todo
+                  </Link>
                 </MenuItem>
-                <MenuItem onClick={handleClose} id="menu-item">
-                  Packs de cerveza
+                <MenuItem onClick={handleClose} className="menu-item">
+                  <Link to="">
+                    Packs de cerveza
+                  </Link>
                 </MenuItem>
-                <MenuItem onClick={handleClose} id="menu-item">
-                  Barriles
+                <MenuItem onClick={handleClose} className="menu-item">
+                  <Link to="">
+                    Barriles
+                  </Link>
                 </MenuItem>
-                <MenuItem onClick={handleClose} id="menu-item">
-                  Schopera
+                <MenuItem onClick={handleClose} className="menu-item">
+                  <Link to="">
+                    Schopera
+                  </Link>
                 </MenuItem>
               </Menu>
             </li>
-          </Link>
+          </div>
 
           <Link to="/envios" style={{ textDecoration: "none" }}>
             <li className="list-item">
-              <Button id="basic-button">Envíos</Button>
+              <Button className="basic-button">Envíos</Button>
             </li>
           </Link>
 
           <Link to="/contacto" style={{ textDecoration: "none" }}>
             <li className="list-item">
-              <Button id="basic-button">Contacto</Button>
+              <Button className="basic-button">Contacto</Button>
             </li>
           </Link>
         </ul>
