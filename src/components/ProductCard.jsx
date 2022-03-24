@@ -17,7 +17,7 @@ const ProductCard = ({product, id}) => {
             />
             <CardContent align="left">
                 <Typography gutterBottom variant="h4" component="div" className="product-card-title">
-                    {product ? product.nombre_corto : "Pack Beer Name"}
+                    {product ? `Pack ${product.nombre_corto}` : "Pack Beer Name"}
                 </Typography>
                 <Typography variant="h5" className="product-card-description">
                     {product ? product.descripcion : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."}
