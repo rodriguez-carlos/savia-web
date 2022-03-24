@@ -3,6 +3,7 @@ import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 import Button from "@mui/material/Button";
 import ProductCard from '../components/ProductCard';
+import ProductCardsContainer from '../components/ProductCardsContainer';
 import ScrollContainer from "react-indiana-drag-scroll";
 import { getAllVarieties, getVariety } from '../service/api.js';
 
@@ -20,6 +21,10 @@ const BeersKinds = () => {
     style: 'currency',
     currency: 'CLP',
   });
+
+  const staticInfo = {
+    title: 'Mira todos nuestros packs',
+  }
   
   useEffect(() => {
     const callVarietyApi = async () => {
@@ -67,13 +72,16 @@ const BeersKinds = () => {
           <hr />
 
           <p className="text-body-porcent">
-            lorem: Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            <span>{variety ? variety.attributes.contenido_abv : ''}</span>
+            &nbsp;ABV (graduación Alcohólica)
           </p>
           <p className="text-body-porcent">
-            lorem: Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            <span>{variety ? variety.attributes.contenido_ibu : ''}</span>
+            &nbsp;IBU (amargor)
           </p>
           <p className="text-body-porcent">
-            lorem: Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            <span>{variety ? variety.attributes.contenido_por_unidad : ''}</span>
+            &nbsp;Contenido por unidad
           </p>
 
           <p className="precio">
@@ -122,18 +130,8 @@ const BeersKinds = () => {
         </div>
       </div>
 
-      <p className="title-2">Mira todos nuestros packs</p>
-      <ScrollContainer className="product-cards-container-grid" >
-        {varieties ?
-          varieties.map((variety) => {
-              return (
-                  <div className="product-cards-container-card" key={variety.id}>
-                      <ProductCard product={variety.attributes} id={variety.id}/> 
-                  </div>
-              )
-          })
-        : ''}
-      </ScrollContainer>
+      <ProductCardsContainer staticInfo={staticInfo} varieties={varieties} />
+
       <Footer />
     </>
   );

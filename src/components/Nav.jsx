@@ -3,7 +3,7 @@ import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import logo from "../static/sabia-10x10-03.png";
-import { Link } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
 import { GrMenu } from "react-icons/gr";
 import { AiOutlineDown } from "react-icons/ai";
 
@@ -41,26 +41,26 @@ const Nav = () => {
         <ul>
           <Link to="/" style={{ textDecoration: "none" }}>
             <li className="list-item">
-              <Button id="basic-button">Inicio</Button>
+              <Button className="basic-button">Inicio</Button>
             </li>
           </Link>
 
           <Link to="/nosotros" style={{ textDecoration: "none" }}>
             <li className="list-item">
-              <Button id="basic-button">Sobre Nosotros</Button>
+              <Button className="basic-button">Sobre Nosotros</Button>
             </li>
           </Link>
 
-          <Link to="" style={{ textDecoration: "none" }}>
+          <div to="">
             <li className="list-item">
               <Button
-                id="basic-button"
+                className="basic-button"
                 aria-controls={open ? "basic-menu" : undefined}
                 aria-haspopup="true"
                 aria-expanded={open ? "true" : undefined}
                 onClick={handleClick}
               >
-                Productos &nbsp;<p>y</p>&nbsp; Servicios &nbsp;
+                Productos &nbsp;<span>y</span>&nbsp; Servicios &nbsp;
                 <AiOutlineDown />
               </Button>
               <Menu
@@ -69,31 +69,39 @@ const Nav = () => {
                 open={open}
                 onClose={handleClose}
               >
-                <MenuItem onClick={handleClose} id="menu-item">
-                  <span>Ver todo</span>
+                <MenuItem onClick={handleClose} className="menu-item">
+                  <Link to="/productos">
+                    Ver todo
+                  </Link>
                 </MenuItem>
-                <MenuItem onClick={handleClose} id="menu-item">
-                  Packs de cerveza
+                <MenuItem onClick={handleClose} className="menu-item">
+                  <Link to="/productos#packs">
+                    Packs de cerveza
+                  </Link>
                 </MenuItem>
-                <MenuItem onClick={handleClose} id="menu-item">
-                  Barriles
+                <MenuItem onClick={handleClose} className="menu-item">
+                  <Link to="/productos#barriles">
+                    Barriles
+                  </Link>
                 </MenuItem>
-                <MenuItem onClick={handleClose} id="menu-item">
-                  Schopera
+                <MenuItem onClick={handleClose} className="menu-item">
+                  <Link to="/productos#shopera">
+                    Schopera
+                  </Link>
                 </MenuItem>
               </Menu>
             </li>
-          </Link>
+          </div>
 
           <Link to="/envios" style={{ textDecoration: "none" }}>
             <li className="list-item">
-              <Button id="basic-button">Envíos</Button>
+              <Button className="basic-button">Envíos</Button>
             </li>
           </Link>
 
           <Link to="/contacto" style={{ textDecoration: "none" }}>
             <li className="list-item">
-              <Button id="basic-button">Contacto</Button>
+              <Button className="basic-button">Contacto</Button>
             </li>
           </Link>
         </ul>

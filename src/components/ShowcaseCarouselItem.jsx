@@ -1,5 +1,5 @@
 import { Paper, Typography, Button } from "@mui/material";
-import { Link } from 'react-router-dom';
+import { HashLink as Link } from 'react-router-hash-link';
 
 const ShowcaseCarouselItem = ({slide, textOnLeft}) => {
     if(!slide) return '';

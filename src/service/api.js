@@ -22,9 +22,15 @@ async function getCarouselSlides () {
     return response.data;
 }
 
+async function getProductCarouselSlides () {
+    const response = await StrapiClient.get('/carrusel-productos-slides');
+    return response.data;
+}
+
 module.exports = {
     getAllVarieties,
     getVariety,
-    getCarouselSlides
+    getCarouselSlides,
+    getProductCarouselSlides,
 }
 
