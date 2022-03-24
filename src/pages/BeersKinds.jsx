@@ -13,6 +13,9 @@ const BeersKinds = () => {
   const { paramId } = useParams();
   const [variety, setVariety] = useState();
   const [varieties, setVarieties] = useState();
+  const messageGenerator = (name, size) => {
+    return `Hola! Me interesa su pack de ${name} por ${size} unidades`
+  }
   var formatter = new Intl.NumberFormat('es-CL', {
     style: 'currency',
     currency: 'CLP',
@@ -25,7 +28,7 @@ const BeersKinds = () => {
     }
     const callVarietiesApi = async () => {
       const result = await getAllVarieties();
-      const neededResult = result.data.filter(variety => variety.id != paramId);
+      const neededResult = result.data.filter(variety => variety.id !== parseInt(paramId));
       console.log(neededResult);
       setVarieties(neededResult);
     }
@@ -78,25 +81,34 @@ const BeersKinds = () => {
               {variety ? formatter.format(variety.attributes.precio_x6) : ''} CLP
             </span>
           </p>
-          <Button id="button" sx={{ borderRadius: 15, marginTop: 1 }}>
-            comprar pack x6
-          </Button>
-          <p className="precio">
-            <span><strong>Precio: </strong>
-              {variety ? formatter.format(variety.attributes.precio_x12) : ''} CLP
-            </span>
-          </p>
-          <Button id="button" sx={{ borderRadius: 15, marginTop: 1 }}>
-            comprar pack x12
-          </Button>
+          <a href={variety ? `https://wa.me/56952321116?text=${messageGenerator(variety.attributes.nombre_corto, 6)}`: ''}
+          style={{textDecoration: "none"}} target="_blank" rel="noreferrer">
+            <Button id="button" sx={{ borderRadius: 15, marginTop: 1 }}>
+              comprar pack x6
+            </Button>
+          </a>
+            <p className="precio">
+              <span><strong>Precio: </strong>
+                {variety ? formatter.format(variety.attributes.precio_x12) : ''} CLP
+              </span>
+            </p>
+          <a href={variety ? `https://wa.me/56952321116?text=${messageGenerator(variety.attributes.nombre_corto, 12)}`: ''}
+          style={{textDecoration: "none"}} target="_blank" rel="noreferrer">
+            <Button id="button" sx={{ borderRadius: 15, marginTop: 1 }}>
+              comprar pack x12
+            </Button>
+          </a>
           <p className="precio">
             <span><strong>Precio: </strong>
               {variety ? formatter.format(variety.attributes.precio_x24) : ''} CLP
             </span>
           </p>
-          <Button id="button" sx={{ borderRadius: 15, marginTop: 1 }}>
-            comprar pack x24
-          </Button>
+          <a href={variety ? `https://wa.me/56952321116?text=${messageGenerator(variety.attributes.nombre_corto, 24)}`: ''}
+          style={{textDecoration: "none"}} target="_blank" rel="noreferrer">
+            <Button id="button" sx={{ borderRadius: 15, marginTop: 1 }}>
+              comprar pack x24
+            </Button>
+          </a>
         </div>
         <div className="photo">
           {variety ? 
