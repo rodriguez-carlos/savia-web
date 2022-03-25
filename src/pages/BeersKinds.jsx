@@ -2,9 +2,7 @@ import React, { useEffect, useState } from "react";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 import Button from "@mui/material/Button";
-import ProductCard from '../components/ProductCard';
 import ProductCardsContainer from '../components/ProductCardsContainer';
-import ScrollContainer from "react-indiana-drag-scroll";
 import { getAllVarieties, getVariety } from '../service/api.js';
 
 import { useParams } from "react-router-dom";
