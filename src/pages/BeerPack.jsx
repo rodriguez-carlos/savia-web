@@ -3,17 +3,23 @@ import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 import Button from "@mui/material/Button";
 import ProductCardsContainer from '../components/ProductCardsContainer';
+import PackAccordion from "../components/PackAccordion";
 import { getAllVarieties, getVariety } from '../service/api.js';
 
 import { useParams } from "react-router-dom";
 import ShowcaseCarousel from "../components/ShowcaseCarousel";
 
-const BeersKinds = () => {
+const BeerPack = () => {
   const { paramId } = useParams();
   const [variety, setVariety] = useState();
   const [varieties, setVarieties] = useState();
+  const [expanded, setExpanded] = useState(false);
+
+    const handleChange = (panel) => (event, isExpanded) => {
+        setExpanded(isExpanded ? panel : false);
+    };
   const messageGenerator = (name, size) => {
-    return `Hola! Me interesa su pack de ${name} por ${size} unidades`
+    return `Hola! Me interesa su pack ${name} por ${size} unidades`
   }
   var formatter = new Intl.NumberFormat('es-CL', {
     style: 'currency',
@@ -52,36 +58,7 @@ const BeersKinds = () => {
           <p className="text">
             {variety ? variety.attributes.descripcion : ''}
           </p>
-
-          <p className="subtitle-three">Ingredientes:</p>
-          <p className="text-body">
-            <span>Malta:</span> {variety ? variety.attributes.contenido_malta : ''}
-          </p>
-          <p className="text-body">
-            <span>Lúpulos:</span> {variety ? variety.attributes.contenido_lupulos : ''}
-          </p>
-          <p className="text-body">
-            <span>Levadura:</span> {variety ? variety.attributes.contenido_levadura : ''}
-          </p>
-          <p className="text-body">
-            <span>Otros:</span> {variety ? variety.attributes.contenido_otros : ''}
-          </p>
-
-          <hr />
-
-          <p className="text-body-porcent">
-            <span>{variety ? variety.attributes.contenido_abv : ''}</span>
-            &nbsp;ABV (graduación Alcohólica)
-          </p>
-          <p className="text-body-porcent">
-            <span>{variety ? variety.attributes.contenido_ibu : ''}</span>
-            &nbsp;IBU (amargor)
-          </p>
-          <p className="text-body-porcent">
-            <span>{variety ? variety.attributes.contenido_por_unidad : ''}</span>
-            &nbsp;Contenido por unidad
-          </p>
-
+          <PackAccordion size={6} expanded={expanded === 'panel1'} handleChange={handleChange('panel1')}/>
           <p className="precio">
             <span><strong>Precio: </strong>
               {variety ? formatter.format(variety.attributes.precio_x6) : ''} CLP
@@ -93,17 +70,19 @@ const BeersKinds = () => {
               comprar pack x6
             </Button>
           </a>
-            <p className="precio">
-              <span><strong>Precio: </strong>
-                {variety ? formatter.format(variety.attributes.precio_x12) : ''} CLP
-              </span>
-            </p>
+          <PackAccordion size={12} expanded={expanded === 'panel2'} handleChange={handleChange('panel2')}/>
+          <p className="precio">
+            <span><strong>Precio: </strong>
+              {variety ? formatter.format(variety.attributes.precio_x12) : ''} CLP
+            </span>
+          </p>
           <a href={variety ? `https://wa.me/56952321116?text=${messageGenerator(variety.attributes.nombre_corto, 12)}`: ''}
           style={{textDecoration: "none"}} target="_blank" rel="noreferrer">
             <Button id="button" sx={{ borderRadius: 15, marginTop: 1 }}>
               comprar pack x12
             </Button>
           </a>
+          <PackAccordion size={24} expanded={expanded === 'panel3'} handleChange={handleChange('panel3')}/>
           <p className="precio">
             <span><strong>Precio: </strong>
               {variety ? formatter.format(variety.attributes.precio_x24) : ''} CLP
@@ -135,4 +114,4 @@ const BeersKinds = () => {
   );
 };
 
-export default BeersKinds;
+export default BeerPack;

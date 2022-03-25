@@ -128,7 +128,7 @@ const BeersKinds = () => {
         </div>
       </div>
 
-      <ProductCardsContainer staticInfo={staticInfo} varieties={varieties} barrel/>
+      <ProductCardsContainer staticInfo={staticInfo} varieties={varieties} />
 
       <Footer />
     </>

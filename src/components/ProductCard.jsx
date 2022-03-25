@@ -7,12 +7,14 @@ import { Link } from 'react-router-dom';
 
 
 const ProductCard = ({product, id, barrel}) => {
+    let mixto = '';
     const label = barrel ? 'Barril' : 'Pack';
-    if(!product) return;
+    if(!product) return '';
     const image = barrel 
         ? product.imagen_barril_card.data.attributes.url 
         : product.imagen_card.data.attributes.url;
-    const path = barrel ? 'barriles' : 'variedades';
+    mixto = product.categoria === "packMixto" ? '/mixto' : '';
+    const path = barrel ? `barriles${mixto}` : `variedades${mixto}`;
     return (
         <Card className="product-card" elevation={4}>
             <CardMedia 
