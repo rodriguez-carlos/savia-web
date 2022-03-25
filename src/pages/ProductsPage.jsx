@@ -21,13 +21,14 @@ const ProductsPage = () => {
     const [carouselData, setCarouselData] = useState();
     const callCarouselApi = async () => {
         const result = await getProductCarouselSlides();
+        console.log(result.data);
+        result.data.sort((a, b) => a.id - b.id);
         setCarouselData(result.data);
     }
 
     const [varietiesData, setVarietiesData] = useState();
     const callVarietiesApi = async () => {
         const result = await getAllVarieties();
-        console.log(result.data);
         setVarietiesData(result.data);
     }
 

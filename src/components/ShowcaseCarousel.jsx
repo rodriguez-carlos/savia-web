@@ -5,6 +5,7 @@ import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 const ShowcaseCarousel = ({children}) => {
     return (
         <Carousel
+            swipe={false}
             NextIcon={<ArrowForwardIosIcon />}
             PrevIcon={<ArrowBackIosIcon />}
             navButtonsAlwaysVisible={true}

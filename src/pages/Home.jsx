@@ -31,6 +31,7 @@ const Home = () => {
   const [carouselData, setCarouselData] = useState();
   const callCarouselApi = async () => {
     const result = await getCarouselSlides();
+    result.data.sort((a, b) => a.id - b.id);
     setCarouselData(result.data);
   }
   useEffect(() => {
