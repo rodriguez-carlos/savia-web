@@ -27,6 +27,7 @@ const ProductsPage = () => {
     const [varietiesData, setVarietiesData] = useState();
     const callVarietiesApi = async () => {
         const result = await getAllVarieties();
+        console.log(result.data);
         setVarietiesData(result.data);
     }
 
@@ -58,7 +59,7 @@ const ProductsPage = () => {
                     <ProductCardsContainer
                         className="left-align"
                         staticInfo={kegsStaticInfo}
-                        varieties={varietiesData}
+                        varieties={varietiesData ? varietiesData.filter(variety => variety.attributes.categoria === "tipoCerveza") : ''}
                         barrel
                     />
                 </div>

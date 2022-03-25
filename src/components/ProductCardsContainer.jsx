@@ -4,6 +4,7 @@ import ScrollContainer from "react-indiana-drag-scroll";
 import ProductCard from "./ProductCard";
 
 const ProductCardsContainer = ({staticInfo, varieties, barrel, className = ''}) => {
+    console.log(varieties);
     return (
         <div className={`product-cards-container ${className}`}>
             <Typography variant="h1" className="product-cards-container-title">

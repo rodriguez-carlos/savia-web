@@ -5,9 +5,9 @@ const ShowcaseCarouselItem = ({slide, textOnLeft}) => {
     if(!slide) return '';
     return (
         <Paper elevation={3} className="showcase-carousel-item">
-            <img src={`http://localhost:1337${slide.attributes.imagen.data.attributes.url}`}
+            <img src={slide.attributes.imagen.data.attributes.url}
                 height={749}
-                alt=""
+                alt={slide.attributes.imagen.data.attributes.alternativeText}
                 className="showcase-carousel-item-img"
             />
             <Paper

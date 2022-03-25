@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 
 const ProductCard = ({product, id, barrel}) => {
     const label = barrel ? 'Barril' : 'Pack';
+    if(!product) return;
     const image = barrel 
         ? product.imagen_barril_card.data.attributes.url 
         : product.imagen_card.data.attributes.url;
@@ -16,8 +17,8 @@ const ProductCard = ({product, id, barrel}) => {
         <Card className="product-card" elevation={4}>
             <CardMedia 
                 component="img"
-                height="352"
-                image= {`http://localhost:1337${image}`}
+                height="337"
+                image= {image}
                 alt={product.imagen_card.data.attributes.alternativeText}
             />
             <CardContent align="left">

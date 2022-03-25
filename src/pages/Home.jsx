@@ -18,14 +18,15 @@ const Home = () => {
     attributes: {
       titulo: "Nuestra Filosofía", 
       descripcion: "Somos una empresa independiente y consciente del medio ambiente. Conoce más sobre Savia!",
-      imagen: { data: { attributes: { url: "/uploads/nuestra_filosofia_home_1a31e03e65.jpg" } } },
+      imagen: { data: { attributes: { url: "https://res.cloudinary.com/dnhg9b4bc/image/upload/v1648219426/nuestra_filosofia_home_6258fcb306.jpg?updated_at=2022-03-25T14:43:49.676Z" } } },
       ruta_link: '/nosotros'
     }
   }
   const [varietiesData, setVarietiesData] = useState();
   const callVarietiesApi = async () => {
     const result = await getAllVarieties();
-    setVarietiesData(result.data);
+    const onlyTypes = result.data.filter(variety => variety.attributes.categoria === "tipoCerveza");
+    setVarietiesData(onlyTypes);
   }
   const [carouselData, setCarouselData] = useState();
   const callCarouselApi = async () => {

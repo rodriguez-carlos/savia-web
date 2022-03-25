@@ -1,7 +1,7 @@
 const axios = require('axios').default;
 
 const StrapiClient = axios.create({
-    baseURL: 'http://localhost:1337/api',
+    baseURL: 'http://savia-web-backend.herokuapp.com/api',
     params: {
         populate: '*'
     }

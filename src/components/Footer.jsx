@@ -23,7 +23,7 @@ const Footer = () => {
               <AiOutlineMail />
             </div>
           </Link>
-          <a href="" target="_blank" rel="noreferrer">
+          <a href="https://wa.me/56952321116?text=Hola! Me interesan sus cervezas artesanales" target="_blank" rel="noreferrer">
             <div className="social-media-item">
               <BsWhatsapp />
             </div>
