@@ -1,17 +1,19 @@
 .beer-process-container {
   padding: 0 4.2rem;
   display: flex;
-  height: 41.5rem;
+  height: 40rem;
   justify-content: center;
+  align-items: center;
 
   .info-img {
-    padding: 0 4.9rem;
+    padding: 0 2rem;
 
     .image {
-      height: 246px;
-      width: 282px;
+      height: 25rem;
+      width: 28rem;
       background-size: cover;
       background-position: center;
+      margin: auto;
     }
 
     .one {
@@ -44,15 +46,17 @@
     }
 
     .info-text {
-      font-family: "Roboto";
+      @include normal-font(1.6rem, 400);
       font-style: normal;
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 14.75px;
+      line-height: 18.75px;
     }
   }
 
   .lateral {
+    align-self: baseline;
+    
+    padding-top: 2rem;
+
     .pasos {
       font-family: "Roboto";
       font-style: normal;
@@ -62,15 +66,16 @@
     }
 
     .number {
+      @include normal-font(1.6rem, 500);
       background: #e9c969;
-      border-radius: 40px;
+      border-radius: 50%;
       text-align: center;
-      width: 44px;
-      height: 16px;
+      width: 3rem;
+      height: 3rem;
       margin-bottom: 1rem;
-      font-size: 16px;
-      font-family: "Roboto";
-      font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .line-one {

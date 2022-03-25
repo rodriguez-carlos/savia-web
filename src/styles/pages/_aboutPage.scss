@@ -118,12 +118,11 @@
   }
 
   .title-2 {
-    width: 63.3rem;
-    height: 18.4rem;
-    text-align: center;
     @include primary-font(6.4rem, 500);
+    width: 63.3rem;
+    text-align: center;
     letter-spacing: -0.5px;
-    margin: 6rem auto 0;
+    margin: 2rem auto 3rem;
   }
 }
 
