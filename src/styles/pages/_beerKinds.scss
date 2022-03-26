@@ -103,10 +103,6 @@
     font-size: 55px;
 }
 
-.mySwiper {
-    margin: 6rem 0 6rem 16.8rem;
-}
-
 .product-cards-container-grid {
     margin-top: 6.7rem;
     display: flex;
@@ -131,12 +127,7 @@
         .photo {
             width: 100%;
             height: 91.6rem;
-            background-color: grey;
         }
-    }
-
-    .mySwiper {
-        margin: 2rem 10rem;
     }
 
 }
@@ -149,12 +140,11 @@
 
         .description {
             width: 100%;
-            padding: 0 7.6rem 0 1.9rem;
+            padding: 0 1.9rem 0 1.9rem;
 
             .title {
                 @include primary-font(5rem, 700);
             }
-
         }
 
         .photo {
@@ -164,7 +154,4 @@
         }
     }
 
-    .mySwiper {
-        margin: 6rem 8rem;
-    }
 }
