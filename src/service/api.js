@@ -27,4 +27,14 @@ export async function getProductCarouselSlides () {
     return response.data;
 }
 
+export async function getAllKeezers() {
+    const response = await StrapiClient.get('/schoperas');
+    return response.data;
+}
+
+export async function getKeezer (id) {
+    const response = await StrapiClient.get(`/schoperas/${id}`);
+    return response.data;
+}
+
 

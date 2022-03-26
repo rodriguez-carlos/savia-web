@@ -5,7 +5,7 @@ import ShowcaseCarousel from '../components/ShowcaseCarousel';
 import ShowcaseCarouselItem from '../components/ShowcaseCarouselItem';
 import ProductCardsContainer from '../components/ProductCardsContainer';
 import '../styles/pages/_productsPage.scss';
-import { getProductCarouselSlides, getAllVarieties } from "../service/api";
+import { getProductCarouselSlides, getAllVarieties, getAllKeezers } from "../service/api";
 
 const ProductsPage = () => {
     const productsStaticInfo = {
@@ -16,6 +16,12 @@ const ProductsPage = () => {
     const kegsStaticInfo = {
         title: 'Venta de Barriles',
         description: 'Si quieres organizar una fiesta o tienes un bar, te presentamos esta gran opción para comprar la mejor cerveza artesanal',
+    }
+
+    const keeezersStaticInfo = {
+        title: 'Arriendo de Schopera',
+        description1: '¿Estás pensando en organizar un evento y sorprender a tus invitados?',
+        description2: 'Cotiza con nosotros el arriendo de Schopera (freezer adaptado para dispensar cerveza fría). Nosotros nos preocupamos de llevar la Schopera, dejarla instalada con los barriles dentro, listo para abrir la llave del grifo y servirte una cerveza bien helada!'
     }
 
     const [carouselData, setCarouselData] = useState();
@@ -32,9 +38,16 @@ const ProductsPage = () => {
         setVarietiesData(result.data);
     }
 
+    const [keezersData, setKeezersData] = useState();
+    const callKeezerApi = async () => {
+        const result = await getAllKeezers();
+        setKeezersData(result.data);
+    }
+
     useEffect(() => {
         callCarouselApi();
         callVarietiesApi();
+        callKeezerApi();
     }, [])
 
     return (
@@ -67,6 +80,12 @@ const ProductsPage = () => {
 
                 <div style={{ position: 'relative' }}>
                     <div id="schopera" className="scroll-target" />
+                    <ProductCardsContainer
+                        className="left-align"
+                        staticInfo={keeezersStaticInfo}
+                        varieties={keezersData ? keezersData: ''}
+                        keezer
+                    />
                 </div>
             <Footer />
         </div>
