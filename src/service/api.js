@@ -1,36 +1,40 @@
 const axios = require('axios').default;
 
 const StrapiClient = axios.create({
-    baseURL: 'http://localhost:1337/api',
+    baseURL: 'https://savia-web-backend.herokuapp.com/api',
     params: {
         populate: '*'
     }
 });
 
-async function getAllVarieties () {
+export async function getAllVarieties () {
     const response = await StrapiClient.get('/variedads');
     return response.data;
 }
 
-async function getVariety (id) {
+export async function getVariety (id) {
     const response = await StrapiClient.get(`/variedads/${id}`);
     return response.data;
 }
 
-async function getCarouselSlides () {
+export async function getCarouselSlides () {
     const response = await StrapiClient.get('/carrusel-slides');
     return response.data;
 }
 
-async function getProductCarouselSlides () {
+export async function getProductCarouselSlides () {
     const response = await StrapiClient.get('/carrusel-productos-slides');
     return response.data;
 }
 
-module.exports = {
-    getAllVarieties,
-    getVariety,
-    getCarouselSlides,
-    getProductCarouselSlides,
+export async function getAllKeezers() {
+    const response = await StrapiClient.get('/schoperas');
+    return response.data;
 }
+
+export async function getKeezer (id) {
+    const response = await StrapiClient.get(`/schoperas/${id}`);
+    return response.data;
+}
+
 

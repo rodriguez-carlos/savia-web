@@ -1,11 +1,11 @@
 import Carousel from 'react-material-ui-carousel';
-import ShowcaseCarouselItem from './ShowcaseCarouselItem';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 
 const ShowcaseCarousel = ({children}) => {
     return (
         <Carousel
+            swipe={false}
             NextIcon={<ArrowForwardIosIcon />}
             PrevIcon={<ArrowBackIosIcon />}
             navButtonsAlwaysVisible={true}

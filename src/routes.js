@@ -4,6 +4,9 @@ import About from "./pages/About";
 import Shimpments from "./pages/Shipments";
 import Contact from "./pages/Contact";
 import BeersKinds from "./pages/BeersKinds";
+import BeerKegs from "./pages/BeerKegs";
+import BeerPack from "./pages/BeerPack";
+import Keezer from "./pages/Keezer";
 import ProductsPage from "./pages/ProductsPage";
 
 function Rutas() {
@@ -15,6 +18,9 @@ function Rutas() {
       <Route path="/contacto" element={<Contact />} exact />
       <Route path="/productos" element={<ProductsPage />} exact />
       <Route path="/variedades/:paramId" element={<BeersKinds  />} exact/>
+      <Route path="/barriles/:paramId" element={<BeerKegs  />} exact/>
+      <Route path="/variedades/mixto/:paramId" element={<BeerPack  />} exact/>
+      <Route path="/schoperas/:paramId" element={<Keezer  />} exact/>
     </Routes>
   );
 }

@@ -6,26 +6,30 @@ import Typography from '@mui/material/Typography';
 import { Link } from 'react-router-dom';
 
 
-const ProductCard = ({product, id, barrel}) => {
-    const label = barrel ? 'Barril' : 'Pack';
+const ProductCard = ({product, id, barrel, keezer}) => {
+    let mixto = '';
+    const label = barrel ? 'Barril' : keezer ? '' : 'Pack';
+    if(!product) return '';
     const image = barrel 
         ? product.imagen_barril_card.data.attributes.url 
         : product.imagen_card.data.attributes.url;
-    const path = barrel ? 'barriles' : 'variedades';
+    mixto = product.categoria === "packMixto" ? '/mixto' : '';
+    const path = barrel ? `barriles${mixto}` : keezer ? 'schoperas' : `variedades${mixto}`;
     return (
-        <Card className="product-card" elevation={4}>
+        <Card className={`product-card ${keezer ? 'keezer-card' : ''}`} elevation={4}>
             <CardMedia 
                 component="img"
-                height="352"
-                image= {`http://localhost:1337${image}`}
+                height="337"
+                width={keezer ? '500px' : ''}
+                image= {image}
                 alt={product.imagen_card.data.attributes.alternativeText}
             />
             <CardContent align="left">
                 <Typography gutterBottom variant="h4" component="div" className="product-card-title">
-                    {product ? `${label} ${product.nombre_corto}` : "Pack Beer Name"}
+                    {product && keezer ? product.nombre_servicio : product ? `${label} ${product.nombre_corto}` : ""}
                 </Typography>
                 <Typography variant="h5" className="product-card-description">
-                    {product ? product.descripcion : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."}
+                    {product && keezer ? product.descripcion_1 : product ? product.descripcion : ""}
                 </Typography>
                 <Link
                     className="product-card-button"
@@ -34,7 +38,7 @@ const ProductCard = ({product, id, barrel}) => {
                 >
                     <Button variant="text" className="product-card-button"
                         sx={{borderRadius: 15, marginTop: 1}}>
-                        {product ? (product.stock > 5 ? "Ver Más": "Agotado") : "Ver Más"}
+                        {product && keezer ? "Ver más" : product ? (product.stock > 5 ? "Ver Más": "Agotado") : "Ver Más"}
                     </Button>
                 </Link>
             </CardContent>

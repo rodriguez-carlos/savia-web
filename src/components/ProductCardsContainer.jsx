@@ -3,7 +3,8 @@ import { Typography } from "@mui/material";
 import ScrollContainer from "react-indiana-drag-scroll";
 import ProductCard from "./ProductCard";
 
-const ProductCardsContainer = ({staticInfo, varieties, barrel, className = ''}) => {
+const ProductCardsContainer = ({staticInfo, varieties, barrel, keezer, className = ''}) => {
+    console.log(varieties);
     return (
         <div className={`product-cards-container ${className}`}>
             <Typography variant="h1" className="product-cards-container-title">
@@ -17,7 +18,7 @@ const ProductCardsContainer = ({staticInfo, varieties, barrel, className = ''}) 
                 ? varieties.map((variety) => {
                     return (
                         <div className="product-cards-container-card" key={variety.id}>
-                            <ProductCard product={variety.attributes} id={variety.id} barrel={barrel}/> 
+                            <ProductCard product={variety.attributes} id={variety.id} barrel={barrel} keezer={keezer} /> 
                         </div>
                     )
                 })

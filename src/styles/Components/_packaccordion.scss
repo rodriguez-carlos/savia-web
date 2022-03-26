@@ -1,0 +1,13 @@
+@import '../base/typography';
+
+.accordion {
+    max-width: 29.4rem;
+    margin-top: 3rem;
+    margin-bottom: -2rem;
+    .accordion-summary-text{
+        @include normal-font(3rem, 700)
+    }
+    .accordion-detail-text{
+        @include normal-font(2rem, 400)
+    }
+}
